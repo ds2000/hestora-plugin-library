@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogueId": "com.hestora.official",
+  "channel": "development",
+  "platform": "macos-arm64",
+  "generatedAt": "2026-08-17T18:15:50.239Z",
+  "expiresAt": "2026-08-23T18:15:50.239Z",
+  "entries": [
+    {
+      "entry": {
+        "schemaVersion": "1.0.0",
+        "plugin": {
+          "id": "com.hestora.gmail",
+          "packageVersion": "0.1.0",
+          "manifestVersion": "1.0.0",
+          "displayName": "Gmail",
+          "description": "Project-scoped Gmail intake with optional, separately approved replies.",
+          "publisher": {
+            "id": "com.hestora",
+            "displayName": "Hestora",
+            "trustClaim": "hestora-in-house"
+          },
+          "category": "email",
+          "tags": [
+            "business-admin",
+            "email",
+            "google",
+            "oauth"
+          ]
+        },
+        "compatibility": {
+          "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+          "platforms": [
+            "macos-arm64"
+          ]
+        },
+        "channel": "development",
+        "permissions": [
+          {
+            "capability": "network-egress",
+            "required": true,
+            "reason": "Authorize the account and call the bounded Gmail API operations.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential",
+              "restricted"
+            ],
+            "resourcePatterns": [
+              "/gmail/v1/users/me/profile",
+              "/gmail/v1/users/me/messages",
+              "/gmail/v1/users/me/threads"
+            ],
+            "networkHosts": [
+              "accounts.google.com",
+              "oauth2.googleapis.com",
+              "gmail.googleapis.com"
+            ],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "message-read",
+            "required": true,
+            "reason": "Ingest only messages selected by this project's Gmail query or labels.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential",
+              "restricted"
+            ],
+            "resourcePatterns": [
+              "gmail:selected-query"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "message-send",
+            "required": false,
+            "reason": "Send a user-approved reply from the connected Gmail account.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "gmail:approved-reply"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "secrets-use",
+            "required": true,
+            "reason": "Resolve the OAuth refresh token through the selected project secret broker.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [],
+            "resourcePatterns": [
+              "secret:gmail-oauth-refresh-token"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          }
+        ],
+        "package": {
+          "path": "packages/com.hestora.gmail/0.1.0/Hestora_Gmail_0.1.0.hestora-plugin",
+          "sizeBytes": 7318,
+          "archiveDigest": "sha256:00300ab197a4f0959dcdf77e25cad7dc232830bc0b7af52daf43e98fed07ef4f",
+          "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
+          "contentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
+          "signature": {
+            "scheme": "organization-signature-v1",
+            "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+            "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
+            "signedContentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
+            "signature": "D/UOJGWFDinHD/iX96ULcsxHxFwY7gG4D0LnKmxReT+eK6qgdOCrcwnpEQGVE/MSyMNtpOCxHgbr/z1f3iVTDA==",
+            "publisherIdentity": "com.hestora",
+            "certificateIssuer": "Hestora alpha release signing"
+          }
+        },
+        "publishedAt": "2026-08-17T18:15:50.239Z"
+      },
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "environment": "development",
+        "keyId": "sha256:2ba88a761bfc5546f2db5e18aac3152e47c3ed357f630474739cb568ad4f22d5",
+        "signedEntryDigest": "sha256:f843bfb229d93284aa6ffefeb5408a5b1fac5c1e50da57746c9a75aba82ca71a",
+        "signature": "zIOyDlDVbIr/aleDEKuSNMuMQ/1TMUrLON/IcVphLnFlsJUWFwK+Q8gLtb6xeX2p9oKuyA54/6ekbR4QIR8tDg==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora development catalogue signing"
+      }
+    },
+    {
+      "entry": {
+        "schemaVersion": "1.0.0",
+        "plugin": {
+          "id": "com.hestora.zoho-mail",
+          "packageVersion": "0.1.0",
+          "manifestVersion": "1.0.0",
+          "displayName": "Zoho Mail",
+          "description": "Project-scoped Zoho Mail intake with optional, separately approved replies.",
+          "publisher": {
+            "id": "com.hestora",
+            "displayName": "Hestora",
+            "trustClaim": "hestora-in-house"
+          },
+          "category": "email",
+          "tags": [
+            "business-admin",
+            "email",
+            "oauth",
+            "zoho"
+          ]
+        },
+        "compatibility": {
+          "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+          "platforms": [
+            "macos-arm64"
+          ]
+        },
+        "channel": "development",
+        "permissions": [
+          {
+            "capability": "network-egress",
+            "required": true,
+            "reason": "Authorize the account and call bounded Zoho Mail message operations.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential",
+              "restricted"
+            ],
+            "resourcePatterns": [
+              "/api/accounts",
+              "/api/accounts/{accountId}/messages/view",
+              "/api/accounts/{accountId}/messages/search",
+              "/api/accounts/{accountId}/messages/{messageId}"
+            ],
+            "networkHosts": [
+              "accounts.zoho.com",
+              "mail.zoho.com",
+              "accounts.zoho.eu",
+              "mail.zoho.eu",
+              "accounts.zoho.in",
+              "mail.zoho.in",
+              "accounts.zoho.com.au",
+              "mail.zoho.com.au",
+              "accounts.zoho.jp",
+              "mail.zoho.jp",
+              "accounts.zoho.com.cn",
+              "mail.zoho.com.cn",
+              "accounts.zoho.sa",
+              "mail.zoho.sa",
+              "accounts.zohocloud.ca",
+              "mail.zohocloud.ca"
+            ],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "message-read",
+            "required": true,
+            "reason": "Ingest only messages selected by this project's account and folder policy.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential",
+              "restricted"
+            ],
+            "resourcePatterns": [
+              "zoho-mail:selected-folder"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "message-send",
+            "required": false,
+            "reason": "Send a user-approved reply from the connected Zoho Mail account.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "zoho-mail:approved-reply"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "secrets-use",
+            "required": true,
+            "reason": "Resolve the OAuth refresh token through the selected project secret broker.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [],
+            "resourcePatterns": [
+              "secret:zoho-mail-oauth-refresh-token"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          }
+        ],
+        "package": {
+          "path": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
+          "sizeBytes": 7710,
+          "archiveDigest": "sha256:8f3082a713e4533641091987f47b99b12dbac2dac49ca5b8d1cc9a134dd8505d",
+          "bundleDigest": "sha256:b6966edcda80f3e26ee3e28cfa36ae5907209cf1ee7ae2782c44bd02e757240b",
+          "contentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
+          "signature": {
+            "scheme": "organization-signature-v1",
+            "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+            "bundleDigest": "sha256:b6966edcda80f3e26ee3e28cfa36ae5907209cf1ee7ae2782c44bd02e757240b",
+            "signedContentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
+            "signature": "32izBMX+K8+xDtOdRKN0B1PKIPz+oa2vgvB2T5pXKmIYSEBhmHkI6V1a0w14xdkuZh2WuL3U+ptJgHiynonaDA==",
+            "publisherIdentity": "com.hestora",
+            "certificateIssuer": "Hestora alpha release signing"
+          }
+        },
+        "publishedAt": "2026-08-17T18:15:50.239Z"
+      },
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "environment": "development",
+        "keyId": "sha256:2ba88a761bfc5546f2db5e18aac3152e47c3ed357f630474739cb568ad4f22d5",
+        "signedEntryDigest": "sha256:493f4a38eef205ff391646b8cce91bbeef2328e94c3798df836f0fc1ccbc7954",
+        "signature": "Sn9YRonwK06I3BZziHPTUiDkvedOHui5x6JUdWqLOUcGk5zooF/juMqsomx3ZAdXP6KLpadVbnQHv4fMekZFCw==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora development catalogue signing"
+      }
+    }
+  ]
+}

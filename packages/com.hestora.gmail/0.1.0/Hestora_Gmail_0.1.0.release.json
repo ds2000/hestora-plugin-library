@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Gmail_0.1.0.hestora-plugin",
+    "sizeBytes": 7318,
+    "archiveDigest": "sha256:00300ab197a4f0959dcdf77e25cad7dc232830bc0b7af52daf43e98fed07ef4f"
+  },
+  "manifest": {
+    "id": "com.hestora.gmail",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "0.1.0",
+    "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+    "displayName": "Gmail",
+    "description": "Project-scoped Gmail intake with optional, separately approved replies.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary beta",
+    "homepageUrl": "https://developers.google.com/workspace/gmail/api/guides",
+    "executionMode": "native-broker",
+    "entrypoint": {
+      "kind": "native-broker",
+      "brokerId": "oauth-mailbox-broker",
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "connector",
+        "connectorType": "gmail-mailbox",
+        "adapterProtocol": "rest"
+      },
+      {
+        "type": "messaging-channel",
+        "channelType": "gmail",
+        "transport": "poll",
+        "directions": [
+          "inbound",
+          "outbound"
+        ],
+        "contentTypes": [
+          "message",
+          "thread",
+          "attachment",
+          "channel-metadata"
+        ]
+      },
+      {
+        "type": "workflow-template",
+        "workflowTemplateId": "mailbox-triage"
+      },
+      {
+        "type": "activity-cues",
+        "cues": [
+          "ticket-intake"
+        ]
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "Authorize the account and call the bounded Gmail API operations.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "/gmail/v1/users/me/profile",
+          "/gmail/v1/users/me/messages",
+          "/gmail/v1/users/me/threads"
+        ],
+        "networkHosts": [
+          "accounts.google.com",
+          "oauth2.googleapis.com",
+          "gmail.googleapis.com"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "message-read",
+        "required": true,
+        "reason": "Ingest only messages selected by this project's Gmail query or labels.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "gmail:selected-query"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "message-send",
+        "required": false,
+        "reason": "Send a user-approved reply from the connected Gmail account.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "gmail:approved-reply"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": true,
+        "reason": "Resolve the OAuth refresh token through the selected project secret broker.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "secret:gmail-oauth-refresh-token"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "development",
+    "contentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+    "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
+    "signedContentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
+    "signature": "D/UOJGWFDinHD/iX96ULcsxHxFwY7gG4D0LnKmxReT+eK6qgdOCrcwnpEQGVE/MSyMNtpOCxHgbr/z1f3iVTDA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}

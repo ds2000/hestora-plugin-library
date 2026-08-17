@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Zoho_Mail_0.1.0.hestora-plugin",
+    "sizeBytes": 7710,
+    "archiveDigest": "sha256:8f3082a713e4533641091987f47b99b12dbac2dac49ca5b8d1cc9a134dd8505d"
+  },
+  "manifest": {
+    "id": "com.hestora.zoho-mail",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "0.1.0",
+    "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+    "displayName": "Zoho Mail",
+    "description": "Project-scoped Zoho Mail intake with optional, separately approved replies.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary beta",
+    "homepageUrl": "https://www.zoho.com/mail/help/api/",
+    "executionMode": "native-broker",
+    "entrypoint": {
+      "kind": "native-broker",
+      "brokerId": "oauth-mailbox-broker",
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "connector",
+        "connectorType": "zoho-mailbox",
+        "adapterProtocol": "rest"
+      },
+      {
+        "type": "messaging-channel",
+        "channelType": "zoho-mail",
+        "transport": "poll",
+        "directions": [
+          "inbound",
+          "outbound"
+        ],
+        "contentTypes": [
+          "message",
+          "thread",
+          "attachment",
+          "channel-metadata"
+        ]
+      },
+      {
+        "type": "workflow-template",
+        "workflowTemplateId": "mailbox-triage"
+      },
+      {
+        "type": "activity-cues",
+        "cues": [
+          "ticket-intake"
+        ]
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "Authorize the account and call bounded Zoho Mail message operations.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "/api/accounts",
+          "/api/accounts/{accountId}/messages/view",
+          "/api/accounts/{accountId}/messages/search",
+          "/api/accounts/{accountId}/messages/{messageId}"
+        ],
+        "networkHosts": [
+          "accounts.zoho.com",
+          "mail.zoho.com",
+          "accounts.zoho.eu",
+          "mail.zoho.eu",
+          "accounts.zoho.in",
+          "mail.zoho.in",
+          "accounts.zoho.com.au",
+          "mail.zoho.com.au",
+          "accounts.zoho.jp",
+          "mail.zoho.jp",
+          "accounts.zoho.com.cn",
+          "mail.zoho.com.cn",
+          "accounts.zoho.sa",
+          "mail.zoho.sa",
+          "accounts.zohocloud.ca",
+          "mail.zohocloud.ca"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "message-read",
+        "required": true,
+        "reason": "Ingest only messages selected by this project's account and folder policy.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "zoho-mail:selected-folder"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "message-send",
+        "required": false,
+        "reason": "Send a user-approved reply from the connected Zoho Mail account.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "zoho-mail:approved-reply"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": true,
+        "reason": "Resolve the OAuth refresh token through the selected project secret broker.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "secret:zoho-mail-oauth-refresh-token"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "development",
+    "contentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+    "bundleDigest": "sha256:b6966edcda80f3e26ee3e28cfa36ae5907209cf1ee7ae2782c44bd02e757240b",
+    "signedContentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
+    "signature": "32izBMX+K8+xDtOdRKN0B1PKIPz+oa2vgvB2T5pXKmIYSEBhmHkI6V1a0w14xdkuZh2WuL3U+ptJgHiynonaDA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}

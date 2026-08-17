@@ -1,0 +1,128 @@
+{
+  "entry": {
+    "schemaVersion": "1.0.0",
+    "plugin": {
+      "id": "com.hestora.gmail",
+      "packageVersion": "0.1.0",
+      "manifestVersion": "1.0.0",
+      "displayName": "Gmail",
+      "description": "Project-scoped Gmail intake with optional, separately approved replies.",
+      "publisher": {
+        "id": "com.hestora",
+        "displayName": "Hestora",
+        "trustClaim": "hestora-in-house"
+      },
+      "category": "email",
+      "tags": [
+        "business-admin",
+        "email",
+        "google",
+        "oauth"
+      ]
+    },
+    "compatibility": {
+      "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+      "platforms": [
+        "macos-arm64"
+      ]
+    },
+    "channel": "development",
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "Authorize the account and call the bounded Gmail API operations.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "/gmail/v1/users/me/profile",
+          "/gmail/v1/users/me/messages",
+          "/gmail/v1/users/me/threads"
+        ],
+        "networkHosts": [
+          "accounts.google.com",
+          "oauth2.googleapis.com",
+          "gmail.googleapis.com"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "message-read",
+        "required": true,
+        "reason": "Ingest only messages selected by this project's Gmail query or labels.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "gmail:selected-query"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "message-send",
+        "required": false,
+        "reason": "Send a user-approved reply from the connected Gmail account.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "gmail:approved-reply"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": true,
+        "reason": "Resolve the OAuth refresh token through the selected project secret broker.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "secret:gmail-oauth-refresh-token"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "package": {
+      "path": "packages/com.hestora.gmail/0.1.0/Hestora_Gmail_0.1.0.hestora-plugin",
+      "sizeBytes": 7318,
+      "archiveDigest": "sha256:00300ab197a4f0959dcdf77e25cad7dc232830bc0b7af52daf43e98fed07ef4f",
+      "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
+      "contentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+        "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
+        "signedContentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
+        "signature": "D/UOJGWFDinHD/iX96ULcsxHxFwY7gG4D0LnKmxReT+eK6qgdOCrcwnpEQGVE/MSyMNtpOCxHgbr/z1f3iVTDA==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora alpha release signing"
+      }
+    },
+    "publishedAt": "2026-08-17T18:15:50.239Z"
+  },
+  "signature": {
+    "scheme": "organization-signature-v1",
+    "environment": "development",
+    "keyId": "sha256:2ba88a761bfc5546f2db5e18aac3152e47c3ed357f630474739cb568ad4f22d5",
+    "signedEntryDigest": "sha256:f843bfb229d93284aa6ffefeb5408a5b1fac5c1e50da57746c9a75aba82ca71a",
+    "signature": "zIOyDlDVbIr/aleDEKuSNMuMQ/1TMUrLON/IcVphLnFlsJUWFwK+Q8gLtb6xeX2p9oKuyA54/6ekbR4QIR8tDg==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora development catalogue signing"
+  }
+}

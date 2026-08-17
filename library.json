@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogueId": "com.hestora.official",
+  "channel": "development",
+  "platform": "macos-arm64",
+  "feedPath": "index/v1/development/macos-arm64.feed.json",
+  "generatedAt": "2026-08-17T18:15:50.239Z",
+  "expiresAt": "2026-08-23T18:15:50.239Z",
+  "packages": [
+    {
+      "pluginId": "com.hestora.gmail",
+      "version": "0.1.0",
+      "packagePath": "packages/com.hestora.gmail/0.1.0/Hestora_Gmail_0.1.0.hestora-plugin",
+      "archiveDigest": "sha256:00300ab197a4f0959dcdf77e25cad7dc232830bc0b7af52daf43e98fed07ef4f",
+      "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c"
+    },
+    {
+      "pluginId": "com.hestora.zoho-mail",
+      "version": "0.1.0",
+      "packagePath": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
+      "archiveDigest": "sha256:8f3082a713e4533641091987f47b99b12dbac2dac49ca5b8d1cc9a134dd8505d",
+      "bundleDigest": "sha256:b6966edcda80f3e26ee3e28cfa36ae5907209cf1ee7ae2782c44bd02e757240b"
+    }
+  ]
+}

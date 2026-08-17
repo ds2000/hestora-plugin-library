@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "keys": [
+    {
+      "keyId": "sha256:2ba88a761bfc5546f2db5e18aac3152e47c3ed357f630474739cb568ad4f22d5",
+      "publisherIdentity": "com.hestora",
+      "publicKey": "mr/p2Y9Qt6MMaVdEh/AeyzNdshCuLKMNPWlLZybOy3Q=",
+      "trust": "hestora-in-house",
+      "environment": "development",
+      "certificateIssuer": "Hestora development catalogue signing",
+      "status": "active",
+      "notBefore": "2026-08-17T18:10:50.239Z"
+    }
+  ],
+  "revocations": []
+}
