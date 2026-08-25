@@ -116,28 +116,28 @@
     ],
     "package": {
       "path": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
-      "sizeBytes": 7762,
-      "archiveDigest": "sha256:9baaeefbb066526e24693204f1c7f01e330f290d92a8a2584e0d737582241cbc",
-      "bundleDigest": "sha256:f6d73092bd1c31a32b609c5d67ad73ce2b116075b4ced9fbd4efa4a7fd3f9325",
-      "contentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
+      "sizeBytes": 160103,
+      "archiveDigest": "sha256:111c9ea586a1eafce42c3fafcb931c4928495e9f3336d15e9ab4cda76806800d",
+      "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808",
+      "contentDigest": "sha256:817d6e4c7d9a75e54ac2d5eb0cc3b63937ee8a08844afeeef18f059318801782",
       "signature": {
         "scheme": "organization-signature-v1",
         "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
-        "bundleDigest": "sha256:f6d73092bd1c31a32b609c5d67ad73ce2b116075b4ced9fbd4efa4a7fd3f9325",
-        "signedContentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
-        "signature": "F+MpolNAqpZS/xfq3vo2gt0yXZDdP+JfLwY4nTBPwkpJP5kyfnuARjInb1T40ykfQ7LaQBpmns43hL5+47z1Bg==",
+        "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808",
+        "signedContentDigest": "sha256:817d6e4c7d9a75e54ac2d5eb0cc3b63937ee8a08844afeeef18f059318801782",
+        "signature": "XAuN+ucbn8Wm/tdxtdtriXET/HE3DNbSdgMe6zjXvR9a7G6D1BBQ7Ffpo1ang+luPClrcxU2sBHNMuGNtoaxCg==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora alpha release signing"
       }
     },
-    "publishedAt": "2026-08-25T07:03:55.941Z"
+    "publishedAt": "2026-08-25T13:50:36.349Z"
   },
   "signature": {
     "scheme": "organization-signature-v1",
     "environment": "development",
     "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-    "signedEntryDigest": "sha256:85bd570c1907f034a070514fc2a95dbbf8ed591e7c0405b5ce4f16d76f62c244",
-    "signature": "PmgSs+BjpwTSAhKFskaj5MHUOwJYov7nQHXczkDY8sr8YnYfQI+v0YENGZQOuYD2I9ABj00Sy0Ba1txvzn+sAw==",
+    "signedEntryDigest": "sha256:1b6e20e8a942c64b3b47d2b10af4c0d91d25481922b72f79492785a7f7b3b254",
+    "signature": "X3aHTzKtJceXAWCTKNR35+dDI9O1/6rTbBSSjNUpJIJ4Zfx/RfN4YX8LfdP+juLOtIQNX7kXQMPgA5h495P7BA==",
     "publisherIdentity": "com.hestora",
     "certificateIssuer": "Hestora development catalogue signing"
   }

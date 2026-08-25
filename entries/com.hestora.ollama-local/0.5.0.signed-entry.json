@@ -114,14 +114,14 @@
         "certificateIssuer": "Hestora alpha release signing"
       }
     },
-    "publishedAt": "2026-08-25T07:03:55.941Z"
+    "publishedAt": "2026-08-25T13:50:36.349Z"
   },
   "signature": {
     "scheme": "organization-signature-v1",
     "environment": "development",
     "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-    "signedEntryDigest": "sha256:20123e7a0bbfc87a3ba67f8c0734a292c58bd1fe132864c3668349cdcadc47e2",
-    "signature": "eTsQq0XdkexZlq3PQcY0Uv4ysWLRcRzIbT9jT9QjqDs3M5d9Brjo+hNg0VP6Mt/KCY2blH6/7ITS64zxhMK8Cw==",
+    "signedEntryDigest": "sha256:89cc2b81d50f1694eca13aaa74ebc945a07ac5ab81191f42d6c6322f50fb9b32",
+    "signature": "kVbtaS1/LEAhPHMk+4vd68d+odR/PiPEUHQSTNwJw3RhjB2qwlz4+cGMau9kvRi7f8Szfx6aUqlYeVe/vLjtCQ==",
     "publisherIdentity": "com.hestora",
     "certificateIssuer": "Hestora development catalogue signing"
   }

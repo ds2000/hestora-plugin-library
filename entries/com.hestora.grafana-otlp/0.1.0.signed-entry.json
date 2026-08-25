@@ -1,0 +1,108 @@
+{
+  "entry": {
+    "schemaVersion": "1.0.0",
+    "plugin": {
+      "id": "com.hestora.grafana-otlp",
+      "packageVersion": "0.1.0",
+      "manifestVersion": "1.0.0",
+      "displayName": "Grafana OTLP",
+      "description": "Project-scoped delivery of Hestora workflow metrics, traces and optional coordinator events to an OTLP destination.",
+      "publisher": {
+        "id": "com.hestora",
+        "displayName": "Hestora",
+        "trustClaim": "hestora-in-house"
+      },
+      "category": "observability",
+      "tags": [
+        "grafana",
+        "metrics",
+        "opentelemetry",
+        "traces"
+      ]
+    },
+    "compatibility": {
+      "appVersionRange": ">=0.8.0-beta.5.14 <0.9.0",
+      "platforms": [
+        "macos-arm64"
+      ]
+    },
+    "channel": "development",
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "Send only the selected OTLP signals to the destination configured by the user.",
+        "identityProfileScope": "none",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "/v1/metrics",
+          "/v1/traces",
+          "/v1/logs"
+        ],
+        "networkHosts": [
+          "$configured"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "telemetry-export",
+        "required": true,
+        "reason": "Read the export-safe workflow ledger boundary for the projects explicitly granted to this connection.",
+        "identityProfileScope": "none",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "workflow-ledger:export-safe"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": false,
+        "reason": "Resolve an OTLP access token from the operating-system credential store when authentication is enabled.",
+        "identityProfileScope": "none",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "keychain:observability-otlp"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "package": {
+      "path": "packages/com.hestora.grafana-otlp/0.1.0/Hestora_Grafana_OTLP_0.1.0.hestora-plugin",
+      "sizeBytes": 3812,
+      "archiveDigest": "sha256:485f1abaf6be6641e3f739c31260e90081f3ac18f9f07387d737139118e866c8",
+      "bundleDigest": "sha256:8b41d26d3051f16f95cf67fac1b466a136bfb4b4fd203bcad804bcb01496bc05",
+      "contentDigest": "sha256:0a5a908d178b9097631ed80427a7b642fb29f705f9d7ef1e5bf51272e26e873d",
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+        "bundleDigest": "sha256:8b41d26d3051f16f95cf67fac1b466a136bfb4b4fd203bcad804bcb01496bc05",
+        "signedContentDigest": "sha256:0a5a908d178b9097631ed80427a7b642fb29f705f9d7ef1e5bf51272e26e873d",
+        "signature": "ufbxieTL3cWthscFfVOKhUs7M8QojJLOHxKiXwF141bmbUohF7OeRVAkIgUmf6JDPjnA3CNanea9izKSY9OUAA==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora alpha release signing"
+      }
+    },
+    "publishedAt": "2026-08-25T13:50:36.349Z"
+  },
+  "signature": {
+    "scheme": "organization-signature-v1",
+    "environment": "development",
+    "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+    "signedEntryDigest": "sha256:0c7fcd0a9b5ceeb408fcb46937f44e3a502256cb6088357c24826f5ea4cb2cf2",
+    "signature": "Hw2SJ6+cwdnxeOIHXrrAWvMvc3bZMvMWHZYI7St8ZIl62ygiDPR2Xgsc1aQUSOHFGs/OjZN2xdwm6zeEXSwoAA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora development catalogue signing"
+  }
+}

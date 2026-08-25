@@ -3,8 +3,8 @@
   "catalogueId": "com.hestora.official",
   "channel": "development",
   "platform": "macos-arm64",
-  "generatedAt": "2026-08-25T07:03:55.941Z",
-  "expiresAt": "2026-08-31T07:03:55.941Z",
+  "generatedAt": "2026-08-25T13:50:36.349Z",
+  "expiresAt": "2026-08-31T13:50:36.349Z",
   "entries": [
     {
       "entry": {
@@ -122,14 +122,122 @@
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-08-25T07:03:55.941Z"
+        "publishedAt": "2026-08-25T13:50:36.349Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:c07c4e4063e23dc3030d8c294410e0066dd7ab6c9fdd6b7a68989ae4398f330a",
-        "signature": "i4PItMe0stDCmdzF+p+PJ2fHDEnMrnHWZL1j2zUFfI1Q6vfvuyEgEy7/WiCuCN0SWsL5UWODKBm4vTX6zOXLBQ==",
+        "signedEntryDigest": "sha256:bc61bf1db465fb4329fba28f57896bd2c54e528e38d5826e25713cdbd3aa753a",
+        "signature": "vJURqi28KTv1NHYt5njTiRcjsZ/mRj/MC0L+Vqw1SMyymz3uPWRB7f2qaIwA0efbuc+vR45decQ1D8IXShKBDw==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora development catalogue signing"
+      }
+    },
+    {
+      "entry": {
+        "schemaVersion": "1.0.0",
+        "plugin": {
+          "id": "com.hestora.grafana-otlp",
+          "packageVersion": "0.1.0",
+          "manifestVersion": "1.0.0",
+          "displayName": "Grafana OTLP",
+          "description": "Project-scoped delivery of Hestora workflow metrics, traces and optional coordinator events to an OTLP destination.",
+          "publisher": {
+            "id": "com.hestora",
+            "displayName": "Hestora",
+            "trustClaim": "hestora-in-house"
+          },
+          "category": "observability",
+          "tags": [
+            "grafana",
+            "metrics",
+            "opentelemetry",
+            "traces"
+          ]
+        },
+        "compatibility": {
+          "appVersionRange": ">=0.8.0-beta.5.14 <0.9.0",
+          "platforms": [
+            "macos-arm64"
+          ]
+        },
+        "channel": "development",
+        "permissions": [
+          {
+            "capability": "network-egress",
+            "required": true,
+            "reason": "Send only the selected OTLP signals to the destination configured by the user.",
+            "identityProfileScope": "none",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "/v1/metrics",
+              "/v1/traces",
+              "/v1/logs"
+            ],
+            "networkHosts": [
+              "$configured"
+            ],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "telemetry-export",
+            "required": true,
+            "reason": "Read the export-safe workflow ledger boundary for the projects explicitly granted to this connection.",
+            "identityProfileScope": "none",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "workflow-ledger:export-safe"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "secrets-use",
+            "required": false,
+            "reason": "Resolve an OTLP access token from the operating-system credential store when authentication is enabled.",
+            "identityProfileScope": "none",
+            "projectScope": "selected",
+            "allowedClassifications": [],
+            "resourcePatterns": [
+              "keychain:observability-otlp"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          }
+        ],
+        "package": {
+          "path": "packages/com.hestora.grafana-otlp/0.1.0/Hestora_Grafana_OTLP_0.1.0.hestora-plugin",
+          "sizeBytes": 3812,
+          "archiveDigest": "sha256:485f1abaf6be6641e3f739c31260e90081f3ac18f9f07387d737139118e866c8",
+          "bundleDigest": "sha256:8b41d26d3051f16f95cf67fac1b466a136bfb4b4fd203bcad804bcb01496bc05",
+          "contentDigest": "sha256:0a5a908d178b9097631ed80427a7b642fb29f705f9d7ef1e5bf51272e26e873d",
+          "signature": {
+            "scheme": "organization-signature-v1",
+            "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+            "bundleDigest": "sha256:8b41d26d3051f16f95cf67fac1b466a136bfb4b4fd203bcad804bcb01496bc05",
+            "signedContentDigest": "sha256:0a5a908d178b9097631ed80427a7b642fb29f705f9d7ef1e5bf51272e26e873d",
+            "signature": "ufbxieTL3cWthscFfVOKhUs7M8QojJLOHxKiXwF141bmbUohF7OeRVAkIgUmf6JDPjnA3CNanea9izKSY9OUAA==",
+            "publisherIdentity": "com.hestora",
+            "certificateIssuer": "Hestora alpha release signing"
+          }
+        },
+        "publishedAt": "2026-08-25T13:50:36.349Z"
+      },
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "environment": "development",
+        "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+        "signedEntryDigest": "sha256:0c7fcd0a9b5ceeb408fcb46937f44e3a502256cb6088357c24826f5ea4cb2cf2",
+        "signature": "Hw2SJ6+cwdnxeOIHXrrAWvMvc3bZMvMWHZYI7St8ZIl62ygiDPR2Xgsc1aQUSOHFGs/OjZN2xdwm6zeEXSwoAA==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }
@@ -256,14 +364,14 @@
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-08-25T07:03:55.941Z"
+        "publishedAt": "2026-08-25T13:50:36.349Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:e76f85a0cde151d6699787ed0390af9bc6844f2fec56c778826dfea1004d8119",
-        "signature": "oXFuQ2ohna06aHNtNc5grdMunyk67V7iRC2j5AX0Kq6b4JdBa1ktFJfrdR8B84YoE+mn3klHfPbX9uP8Sjj0Ag==",
+        "signedEntryDigest": "sha256:0f7675ec356c0252942954306cd06a1206883b212a6ca351833af46006b8b0a0",
+        "signature": "k+HX8Hx6OVQtigekFykUHhJuYqH6wD+007WjDVOEgfQdCt0IZWrVpDcQ44osIeol/gL0XrnTd6luAufINd5ZDA==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }
@@ -384,14 +492,14 @@
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-08-25T07:03:55.941Z"
+        "publishedAt": "2026-08-25T13:50:36.349Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:20123e7a0bbfc87a3ba67f8c0734a292c58bd1fe132864c3668349cdcadc47e2",
-        "signature": "eTsQq0XdkexZlq3PQcY0Uv4ysWLRcRzIbT9jT9QjqDs3M5d9Brjo+hNg0VP6Mt/KCY2blH6/7ITS64zxhMK8Cw==",
+        "signedEntryDigest": "sha256:89cc2b81d50f1694eca13aaa74ebc945a07ac5ab81191f42d6c6322f50fb9b32",
+        "signature": "kVbtaS1/LEAhPHMk+4vd68d+odR/PiPEUHQSTNwJw3RhjB2qwlz4+cGMau9kvRi7f8Szfx6aUqlYeVe/vLjtCQ==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }
@@ -514,28 +622,28 @@
         ],
         "package": {
           "path": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
-          "sizeBytes": 7762,
-          "archiveDigest": "sha256:9baaeefbb066526e24693204f1c7f01e330f290d92a8a2584e0d737582241cbc",
-          "bundleDigest": "sha256:f6d73092bd1c31a32b609c5d67ad73ce2b116075b4ced9fbd4efa4a7fd3f9325",
-          "contentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
+          "sizeBytes": 160103,
+          "archiveDigest": "sha256:111c9ea586a1eafce42c3fafcb931c4928495e9f3336d15e9ab4cda76806800d",
+          "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808",
+          "contentDigest": "sha256:817d6e4c7d9a75e54ac2d5eb0cc3b63937ee8a08844afeeef18f059318801782",
           "signature": {
             "scheme": "organization-signature-v1",
             "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
-            "bundleDigest": "sha256:f6d73092bd1c31a32b609c5d67ad73ce2b116075b4ced9fbd4efa4a7fd3f9325",
-            "signedContentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
-            "signature": "F+MpolNAqpZS/xfq3vo2gt0yXZDdP+JfLwY4nTBPwkpJP5kyfnuARjInb1T40ykfQ7LaQBpmns43hL5+47z1Bg==",
+            "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808",
+            "signedContentDigest": "sha256:817d6e4c7d9a75e54ac2d5eb0cc3b63937ee8a08844afeeef18f059318801782",
+            "signature": "XAuN+ucbn8Wm/tdxtdtriXET/HE3DNbSdgMe6zjXvR9a7G6D1BBQ7Ffpo1ang+luPClrcxU2sBHNMuGNtoaxCg==",
             "publisherIdentity": "com.hestora",
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-08-25T07:03:55.941Z"
+        "publishedAt": "2026-08-25T13:50:36.349Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:85bd570c1907f034a070514fc2a95dbbf8ed591e7c0405b5ce4f16d76f62c244",
-        "signature": "PmgSs+BjpwTSAhKFskaj5MHUOwJYov7nQHXczkDY8sr8YnYfQI+v0YENGZQOuYD2I9ABj00Sy0Ba1txvzn+sAw==",
+        "signedEntryDigest": "sha256:1b6e20e8a942c64b3b47d2b10af4c0d91d25481922b72f79492785a7f7b3b254",
+        "signature": "X3aHTzKtJceXAWCTKNR35+dDI9O1/6rTbBSSjNUpJIJ4Zfx/RfN4YX8LfdP+juLOtIQNX7kXQMPgA5h495P7BA==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }
