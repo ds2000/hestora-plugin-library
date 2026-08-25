@@ -60,6 +60,8 @@
           "mail.zoho.com.cn",
           "accounts.zoho.sa",
           "mail.zoho.sa",
+          "accounts.zoho.uk",
+          "mail.zoho.uk",
           "accounts.zohocloud.ca",
           "mail.zohocloud.ca"
         ],
@@ -114,28 +116,28 @@
     ],
     "package": {
       "path": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
-      "sizeBytes": 7710,
-      "archiveDigest": "sha256:8f3082a713e4533641091987f47b99b12dbac2dac49ca5b8d1cc9a134dd8505d",
-      "bundleDigest": "sha256:b6966edcda80f3e26ee3e28cfa36ae5907209cf1ee7ae2782c44bd02e757240b",
+      "sizeBytes": 7762,
+      "archiveDigest": "sha256:9baaeefbb066526e24693204f1c7f01e330f290d92a8a2584e0d737582241cbc",
+      "bundleDigest": "sha256:f6d73092bd1c31a32b609c5d67ad73ce2b116075b4ced9fbd4efa4a7fd3f9325",
       "contentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
       "signature": {
         "scheme": "organization-signature-v1",
-        "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
-        "bundleDigest": "sha256:b6966edcda80f3e26ee3e28cfa36ae5907209cf1ee7ae2782c44bd02e757240b",
+        "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+        "bundleDigest": "sha256:f6d73092bd1c31a32b609c5d67ad73ce2b116075b4ced9fbd4efa4a7fd3f9325",
         "signedContentDigest": "sha256:1c8873fcb0257190e57376ed3a845aeef299b8f26e0a2936c860bb9ca77e2ac9",
-        "signature": "32izBMX+K8+xDtOdRKN0B1PKIPz+oa2vgvB2T5pXKmIYSEBhmHkI6V1a0w14xdkuZh2WuL3U+ptJgHiynonaDA==",
+        "signature": "F+MpolNAqpZS/xfq3vo2gt0yXZDdP+JfLwY4nTBPwkpJP5kyfnuARjInb1T40ykfQ7LaQBpmns43hL5+47z1Bg==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora alpha release signing"
       }
     },
-    "publishedAt": "2026-08-17T18:15:50.239Z"
+    "publishedAt": "2026-08-25T07:03:55.941Z"
   },
   "signature": {
     "scheme": "organization-signature-v1",
     "environment": "development",
-    "keyId": "sha256:2ba88a761bfc5546f2db5e18aac3152e47c3ed357f630474739cb568ad4f22d5",
-    "signedEntryDigest": "sha256:493f4a38eef205ff391646b8cce91bbeef2328e94c3798df836f0fc1ccbc7954",
-    "signature": "Sn9YRonwK06I3BZziHPTUiDkvedOHui5x6JUdWqLOUcGk5zooF/juMqsomx3ZAdXP6KLpadVbnQHv4fMekZFCw==",
+    "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+    "signedEntryDigest": "sha256:85bd570c1907f034a070514fc2a95dbbf8ed591e7c0405b5ce4f16d76f62c244",
+    "signature": "PmgSs+BjpwTSAhKFskaj5MHUOwJYov7nQHXczkDY8sr8YnYfQI+v0YENGZQOuYD2I9ABj00Sy0Ba1txvzn+sAw==",
     "publisherIdentity": "com.hestora",
     "certificateIssuer": "Hestora development catalogue signing"
   }

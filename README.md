@@ -19,10 +19,13 @@ permissions, change a package or redirect a download without producing new valid
 ## Current development packages
 
 - Gmail `0.1.0`
+- LM Studio `0.2.0`
+- Ollama local models `0.5.0`
 - Zoho Mail `0.1.0`
 
-These packages expose the native mailbox broker and unified setup wizard. They contain no OAuth client
-secret, provider credential, refresh token or mailbox content.
+The mailbox packages expose the native mailbox broker and unified setup wizard. The local-model
+packages expose Hestora's bounded same-Mac and trusted-LAN/VPN runtime broker. Packages contain no
+OAuth client secret, provider credential, refresh token, mailbox content or model weights.
 
 ## Publication
 

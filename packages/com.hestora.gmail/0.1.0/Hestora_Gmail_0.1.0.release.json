@@ -3,7 +3,7 @@
   "artifact": {
     "fileName": "Hestora_Gmail_0.1.0.hestora-plugin",
     "sizeBytes": 7318,
-    "archiveDigest": "sha256:00300ab197a4f0959dcdf77e25cad7dc232830bc0b7af52daf43e98fed07ef4f"
+    "archiveDigest": "sha256:40bcd940a0545b6b8c6d97a45a4edf70b646e6661a9005e2b1c28f74498e4fae"
   },
   "manifest": {
     "id": "com.hestora.gmail",
@@ -136,10 +136,10 @@
   },
   "packageSignature": {
     "scheme": "organization-signature-v1",
-    "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+    "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
     "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
     "signedContentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
-    "signature": "D/UOJGWFDinHD/iX96ULcsxHxFwY7gG4D0LnKmxReT+eK6qgdOCrcwnpEQGVE/MSyMNtpOCxHgbr/z1f3iVTDA==",
+    "signature": "vl2Ho2HrCKP2TaA+rp6RXiMZj4y+/8WqDYBb2ZRcuZRnYjh/0VPZ+lVXw8AU3OPnJ5Ttfiy7n8OSTHfo/11VBQ==",
     "publisherIdentity": "com.hestora",
     "certificateIssuer": "Hestora alpha release signing"
   }

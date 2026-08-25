@@ -1,0 +1,128 @@
+{
+  "entry": {
+    "schemaVersion": "1.0.0",
+    "plugin": {
+      "id": "com.hestora.ollama-local",
+      "packageVersion": "0.5.0",
+      "manifestVersion": "1.0.0",
+      "displayName": "Ollama local models",
+      "description": "Project-scoped access to Ollama models on this Mac or a trusted LAN/VPN.",
+      "publisher": {
+        "id": "com.hestora",
+        "displayName": "Hestora",
+        "trustClaim": "hestora-in-house"
+      },
+      "category": "local-runtime",
+      "tags": [
+        "local",
+        "ollama",
+        "private"
+      ]
+    },
+    "compatibility": {
+      "appVersionRange": ">=0.8.0-beta.5 <0.9.0",
+      "platforms": [
+        "macos-arm64"
+      ]
+    },
+    "channel": "development",
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "List models and submit bounded tasks to Ollama on this device or a trusted LAN/VPN.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "/api/version",
+          "/api/chat",
+          "/v1/models",
+          "/v1/chat/completions"
+        ],
+        "networkHosts": [
+          "localhost",
+          "127.0.0.1",
+          "::1",
+          "$private"
+        ],
+        "providerManifestIds": [
+          "ext.hestora.ollama-local"
+        ]
+      },
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Read the bounded task capsule and verified memory for selected projects.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "project:task-capsule",
+          "project:verified-memory"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.ollama-local"
+        ]
+      },
+      {
+        "capability": "local-compute-use",
+        "required": true,
+        "reason": "Use an Ollama service on the same device or an explicitly selected private network.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "runtime:same-device",
+          "runtime:private-network"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.ollama-local"
+        ]
+      }
+    ],
+    "package": {
+      "path": "packages/com.hestora.ollama-local/0.5.0/Hestora_Ollama_Local_0.5.0.hestora-plugin",
+      "sizeBytes": 6327,
+      "archiveDigest": "sha256:e670900dad81bd26d93dc2164af754b4c93def45df05c9bdf18fdbbb0c1a9ecc",
+      "bundleDigest": "sha256:cd60598b6777bc2f797ee7cd2a36f1e4c257420d6e5718d7baf99466b37126a9",
+      "contentDigest": "sha256:d434c68d56e6546fe15840375f4e2b7a5a7783fa9b1cf3a1aea48513f6f3404f",
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+        "bundleDigest": "sha256:cd60598b6777bc2f797ee7cd2a36f1e4c257420d6e5718d7baf99466b37126a9",
+        "signedContentDigest": "sha256:d434c68d56e6546fe15840375f4e2b7a5a7783fa9b1cf3a1aea48513f6f3404f",
+        "signature": "9oOg66EAWrgOW7GPaBySG3F7GrnYEL5s0tmbRgvdZGXsqp7WOhFWe76IHBjsYvDmnEV11V+j3URqq8wqC/JxBQ==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora alpha release signing"
+      }
+    },
+    "publishedAt": "2026-08-25T07:03:55.941Z"
+  },
+  "signature": {
+    "scheme": "organization-signature-v1",
+    "environment": "development",
+    "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+    "signedEntryDigest": "sha256:20123e7a0bbfc87a3ba67f8c0734a292c58bd1fe132864c3668349cdcadc47e2",
+    "signature": "eTsQq0XdkexZlq3PQcY0Uv4ysWLRcRzIbT9jT9QjqDs3M5d9Brjo+hNg0VP6Mt/KCY2blH6/7ITS64zxhMK8Cw==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora development catalogue signing"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_LM_Studio_0.2.0.hestora-plugin",
+    "sizeBytes": 4394,
+    "archiveDigest": "sha256:4f29caeb02cd35cf2770b00036fc5b628841d6e26e91ebefeacfbf7e155de8e0"
+  },
+  "manifest": {
+    "id": "com.hestora.lm-studio",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "0.2.0",
+    "appVersionRange": ">=0.8.0-beta.5 <0.9.0",
+    "displayName": "LM Studio",
+    "description": "Project-scoped access to LM Studio models on this Mac or a trusted LAN/VPN.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary beta",
+    "homepageUrl": "https://lmstudio.ai/",
+    "executionMode": "native-broker",
+    "entrypoint": {
+      "kind": "native-broker",
+      "brokerId": "openai-compatible-loopback",
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "agent-provider",
+        "providerManifestId": "ext.hestora.lm-studio",
+        "adapterProtocol": "openai-compatible"
+      },
+      {
+        "type": "model-runtime",
+        "runtimeId": "lm-studio-loopback",
+        "adapterProtocol": "openai-compatible"
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "List models and submit bounded tasks to LM Studio on this device or a trusted LAN/VPN.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "/v1/models",
+          "/v1/chat/completions"
+        ],
+        "networkHosts": [
+          "localhost",
+          "127.0.0.1",
+          "::1",
+          "$private"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Read the bounded task capsule and verified memory for selected projects.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "project:task-capsule",
+          "project:verified-memory"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "local-compute-use",
+        "required": true,
+        "reason": "Use an LM Studio service on the same device or an explicitly selected private network.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "runtime:same-device",
+          "runtime:private-network"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": true,
+        "reason": "Use an optional bearer token stored by the operating system.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "keychain:local-runtime"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "preview",
+    "contentDigest": "sha256:618b006c2ed3620f22ec86a0bfe710d666fc03a5016ed9955ef3cf5bb185f211"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+    "bundleDigest": "sha256:cde69f2f5fe9dfe54ec941af27f9a588116492227e1443368956f5b37059b930",
+    "signedContentDigest": "sha256:618b006c2ed3620f22ec86a0bfe710d666fc03a5016ed9955ef3cf5bb185f211",
+    "signature": "BCACtXj2gBfzUlcJ6B1AYJtgJDhjT8tZ0ZbtrImYwjoORr1K7wboiyA4IaZUPFXT38b3aypRn59ni3Jky/b9CA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}

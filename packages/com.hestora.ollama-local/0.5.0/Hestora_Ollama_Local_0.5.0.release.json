@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Ollama_Local_0.5.0.hestora-plugin",
+    "sizeBytes": 6327,
+    "archiveDigest": "sha256:e670900dad81bd26d93dc2164af754b4c93def45df05c9bdf18fdbbb0c1a9ecc"
+  },
+  "manifest": {
+    "id": "com.hestora.ollama-local",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "0.5.0",
+    "appVersionRange": ">=0.8.0-beta.5 <0.9.0",
+    "displayName": "Ollama local models",
+    "description": "Project-scoped access to Ollama models on this Mac or a trusted LAN/VPN.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary beta",
+    "homepageUrl": "https://ollama.com/",
+    "executionMode": "native-broker",
+    "entrypoint": {
+      "kind": "native-broker",
+      "brokerId": "openai-compatible-loopback",
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "agent-provider",
+        "providerManifestId": "ext.hestora.ollama-local",
+        "adapterProtocol": "openai-compatible"
+      },
+      {
+        "type": "model-runtime",
+        "runtimeId": "ollama-loopback",
+        "adapterProtocol": "openai-compatible"
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "List models and submit bounded tasks to Ollama on this device or a trusted LAN/VPN.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "/api/version",
+          "/api/chat",
+          "/v1/models",
+          "/v1/chat/completions"
+        ],
+        "networkHosts": [
+          "localhost",
+          "127.0.0.1",
+          "::1",
+          "$private"
+        ],
+        "providerManifestIds": [
+          "ext.hestora.ollama-local"
+        ]
+      },
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Read the bounded task capsule and verified memory for selected projects.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "project:task-capsule",
+          "project:verified-memory"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.ollama-local"
+        ]
+      },
+      {
+        "capability": "local-compute-use",
+        "required": true,
+        "reason": "Use an Ollama service on the same device or an explicitly selected private network.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential",
+          "restricted"
+        ],
+        "resourcePatterns": [
+          "runtime:same-device",
+          "runtime:private-network"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.ollama-local"
+        ]
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "preview",
+    "contentDigest": "sha256:d434c68d56e6546fe15840375f4e2b7a5a7783fa9b1cf3a1aea48513f6f3404f"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+    "bundleDigest": "sha256:cd60598b6777bc2f797ee7cd2a36f1e4c257420d6e5718d7baf99466b37126a9",
+    "signedContentDigest": "sha256:d434c68d56e6546fe15840375f4e2b7a5a7783fa9b1cf3a1aea48513f6f3404f",
+    "signature": "9oOg66EAWrgOW7GPaBySG3F7GrnYEL5s0tmbRgvdZGXsqp7WOhFWe76IHBjsYvDmnEV11V+j3URqq8wqC/JxBQ==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}

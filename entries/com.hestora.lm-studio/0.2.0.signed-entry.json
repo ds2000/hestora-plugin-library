@@ -2,26 +2,26 @@
   "entry": {
     "schemaVersion": "1.0.0",
     "plugin": {
-      "id": "com.hestora.gmail",
-      "packageVersion": "0.1.0",
+      "id": "com.hestora.lm-studio",
+      "packageVersion": "0.2.0",
       "manifestVersion": "1.0.0",
-      "displayName": "Gmail",
-      "description": "Project-scoped Gmail intake with optional, separately approved replies.",
+      "displayName": "LM Studio",
+      "description": "Project-scoped access to LM Studio models on this Mac or a trusted LAN/VPN.",
       "publisher": {
         "id": "com.hestora",
         "displayName": "Hestora",
         "trustClaim": "hestora-in-house"
       },
-      "category": "email",
+      "category": "local-runtime",
       "tags": [
-        "business-admin",
-        "email",
-        "google",
-        "oauth"
+        "lm-studio",
+        "local",
+        "openai-compatible",
+        "private"
       ]
     },
     "compatibility": {
-      "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+      "appVersionRange": ">=0.8.0-beta.5 <0.9.0",
       "platforms": [
         "macos-arm64"
       ]
@@ -31,55 +31,61 @@
       {
         "capability": "network-egress",
         "required": true,
-        "reason": "Authorize the account and call the bounded Gmail API operations.",
+        "reason": "List models and submit bounded tasks to LM Studio on this device or a trusted LAN/VPN.",
         "identityProfileScope": "selected",
         "projectScope": "selected",
         "allowedClassifications": [
+          "public",
           "internal",
           "confidential",
           "restricted"
         ],
         "resourcePatterns": [
-          "/gmail/v1/users/me/profile",
-          "/gmail/v1/users/me/messages",
-          "/gmail/v1/users/me/threads"
+          "/v1/models",
+          "/v1/chat/completions"
         ],
         "networkHosts": [
-          "accounts.google.com",
-          "oauth2.googleapis.com",
-          "gmail.googleapis.com"
+          "localhost",
+          "127.0.0.1",
+          "::1",
+          "$private"
         ],
         "providerManifestIds": []
       },
       {
-        "capability": "message-read",
+        "capability": "project-read",
         "required": true,
-        "reason": "Ingest only messages selected by this project's Gmail query or labels.",
+        "reason": "Read the bounded task capsule and verified memory for selected projects.",
         "identityProfileScope": "selected",
         "projectScope": "selected",
         "allowedClassifications": [
+          "public",
           "internal",
           "confidential",
           "restricted"
         ],
         "resourcePatterns": [
-          "gmail:selected-query"
+          "project:task-capsule",
+          "project:verified-memory"
         ],
         "networkHosts": [],
         "providerManifestIds": []
       },
       {
-        "capability": "message-send",
-        "required": false,
-        "reason": "Send a user-approved reply from the connected Gmail account.",
+        "capability": "local-compute-use",
+        "required": true,
+        "reason": "Use an LM Studio service on the same device or an explicitly selected private network.",
         "identityProfileScope": "selected",
         "projectScope": "selected",
         "allowedClassifications": [
+          "public",
           "internal",
-          "confidential"
+          "confidential",
+          "restricted"
         ],
         "resourcePatterns": [
-          "gmail:approved-reply"
+          "runtime:same-device",
+          "runtime:private-network"
         ],
         "networkHosts": [],
         "providerManifestIds": []
@@ -87,29 +93,29 @@
       {
         "capability": "secrets-use",
         "required": true,
-        "reason": "Resolve the OAuth refresh token through the selected project secret broker.",
+        "reason": "Use an optional bearer token stored by the operating system.",
         "identityProfileScope": "selected",
         "projectScope": "selected",
         "allowedClassifications": [],
         "resourcePatterns": [
-          "secret:gmail-oauth-refresh-token"
+          "keychain:local-runtime"
         ],
         "networkHosts": [],
         "providerManifestIds": []
       }
     ],
     "package": {
-      "path": "packages/com.hestora.gmail/0.1.0/Hestora_Gmail_0.1.0.hestora-plugin",
-      "sizeBytes": 7318,
-      "archiveDigest": "sha256:40bcd940a0545b6b8c6d97a45a4edf70b646e6661a9005e2b1c28f74498e4fae",
-      "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
-      "contentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
+      "path": "packages/com.hestora.lm-studio/0.2.0/Hestora_LM_Studio_0.2.0.hestora-plugin",
+      "sizeBytes": 4394,
+      "archiveDigest": "sha256:4f29caeb02cd35cf2770b00036fc5b628841d6e26e91ebefeacfbf7e155de8e0",
+      "bundleDigest": "sha256:cde69f2f5fe9dfe54ec941af27f9a588116492227e1443368956f5b37059b930",
+      "contentDigest": "sha256:618b006c2ed3620f22ec86a0bfe710d666fc03a5016ed9955ef3cf5bb185f211",
       "signature": {
         "scheme": "organization-signature-v1",
         "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
-        "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c",
-        "signedContentDigest": "sha256:0b427c96811d083f2a4c7b9a3d5614ad1ba6c68d36591a168b09efceff2c3504",
-        "signature": "vl2Ho2HrCKP2TaA+rp6RXiMZj4y+/8WqDYBb2ZRcuZRnYjh/0VPZ+lVXw8AU3OPnJ5Ttfiy7n8OSTHfo/11VBQ==",
+        "bundleDigest": "sha256:cde69f2f5fe9dfe54ec941af27f9a588116492227e1443368956f5b37059b930",
+        "signedContentDigest": "sha256:618b006c2ed3620f22ec86a0bfe710d666fc03a5016ed9955ef3cf5bb185f211",
+        "signature": "BCACtXj2gBfzUlcJ6B1AYJtgJDhjT8tZ0ZbtrImYwjoORr1K7wboiyA4IaZUPFXT38b3aypRn59ni3Jky/b9CA==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora alpha release signing"
       }
@@ -120,8 +126,8 @@
     "scheme": "organization-signature-v1",
     "environment": "development",
     "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-    "signedEntryDigest": "sha256:c07c4e4063e23dc3030d8c294410e0066dd7ab6c9fdd6b7a68989ae4398f330a",
-    "signature": "i4PItMe0stDCmdzF+p+PJ2fHDEnMrnHWZL1j2zUFfI1Q6vfvuyEgEy7/WiCuCN0SWsL5UWODKBm4vTX6zOXLBQ==",
+    "signedEntryDigest": "sha256:e76f85a0cde151d6699787ed0390af9bc6844f2fec56c778826dfea1004d8119",
+    "signature": "oXFuQ2ohna06aHNtNc5grdMunyk67V7iRC2j5AX0Kq6b4JdBa1ktFJfrdR8B84YoE+mn3klHfPbX9uP8Sjj0Ag==",
     "publisherIdentity": "com.hestora",
     "certificateIssuer": "Hestora development catalogue signing"
   }
