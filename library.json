@@ -4,8 +4,8 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-08-25T13:50:36.349Z",
-  "expiresAt": "2026-08-31T13:50:36.349Z",
+  "generatedAt": "2026-08-31T18:53:03.764Z",
+  "expiresAt": "2026-09-06T18:53:03.764Z",
   "packages": [
     {
       "pluginId": "com.hestora.grafana-otlp",
