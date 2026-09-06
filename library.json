@@ -4,9 +4,16 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-08-31T18:53:03.764Z",
-  "expiresAt": "2026-09-06T18:53:03.764Z",
+  "generatedAt": "2026-09-06T10:18:24.000Z",
+  "expiresAt": "2026-09-12T10:18:24.000Z",
   "packages": [
+    {
+      "pluginId": "com.hestora.codex-cli",
+      "version": "1.1.0",
+      "packagePath": "packages/com.hestora.codex-cli/1.1.0/Hestora_Codex_CLI_1.1.0.hestora-plugin",
+      "archiveDigest": "sha256:1ec8997193789d95311536bb3118aba87b4dc5f94f1321f959135dcf32504d8e",
+      "bundleDigest": "sha256:b8442089058edd3fc47e3002fe7d043d76cce9982867573a3a820df3cc144782"
+    },
     {
       "pluginId": "com.hestora.grafana-otlp",
       "version": "0.1.0",

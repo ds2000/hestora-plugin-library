@@ -18,7 +18,9 @@ permissions, change a package or redirect a download without producing new valid
 
 ## Current development packages
 
+- Codex CLI adapter `1.1.0`
 - Gmail `0.1.0`
+- Grafana OTLP `0.1.0`
 - LM Studio `0.2.0`
 - Ollama local models `0.5.0`
 - Zoho Mail `0.1.0`
@@ -26,6 +28,10 @@ permissions, change a package or redirect a download without producing new valid
 The mailbox packages expose the native mailbox broker and unified setup wizard. The local-model
 packages expose Hestora's bounded same-Mac and trusted-LAN/VPN runtime broker. Packages contain no
 OAuth client secret, provider credential, refresh token, mailbox content or model weights.
+
+The Codex package supplies isolated admission checks and enables Hestora's native provider broker.
+Installation requires a project grant, successful isolation and behaviour checks, and explicit
+enablement. An existing Codex CLI login does not bypass these steps.
 
 ## Publication
 

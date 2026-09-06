@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Codex_CLI_1.1.0.hestora-plugin",
+    "sizeBytes": 357492,
+    "archiveDigest": "sha256:1ec8997193789d95311536bb3118aba87b4dc5f94f1321f959135dcf32504d8e"
+  },
+  "manifest": {
+    "id": "com.hestora.codex-cli",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "1.1.0",
+    "appVersionRange": ">=0.8.0-beta.5.62 <0.9.0",
+    "displayName": "Codex CLI adapter",
+    "description": "Admission profile for governed Codex CLI sessions through Hestora's isolated native adapter.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary beta",
+    "homepageUrl": "https://developers.openai.com/codex/cli/",
+    "privacyUrl": "https://openai.com/policies/privacy-policy/",
+    "executionMode": "isolated-process",
+    "entrypoint": {
+      "kind": "isolated-process",
+      "executablePath": "bin/hestora-provider-adapter",
+      "arguments": [
+        "--profile",
+        "codex-cli"
+      ],
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "agent-provider",
+        "providerManifestId": "ext.hestora.codex-cli",
+        "adapterProtocol": "native-contract"
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "process-execute",
+        "required": true,
+        "reason": "Start the signed Codex admission adapter inside Hestora's restricted plugin host.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "bin/hestora-provider-adapter"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.codex-cli"
+        ]
+      },
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Receive one bounded task capsule for an assigned project.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "project:task-capsule"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.codex-cli"
+        ]
+      },
+      {
+        "capability": "provider-account-use",
+        "required": true,
+        "reason": "Use only the selected authenticated Codex CLI subscription; Hestora never copies its credentials into the plugin package.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "provider-account:selected"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.codex-cli"
+        ]
+      },
+      {
+        "capability": "filesystem-write",
+        "required": false,
+        "reason": "Edit only an isolated Git worktree after Hestora records an exact workflow approval; the source checkout remains outside the provider boundary.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "worktree:workflow-approved"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.codex-cli"
+        ]
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "development",
+    "contentDigest": "sha256:f62d7009f8bac954a20e1b03c5fdfd4c1542f310c86e85d925e7fefd4d2e4f4e"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+    "bundleDigest": "sha256:b8442089058edd3fc47e3002fe7d043d76cce9982867573a3a820df3cc144782",
+    "signedContentDigest": "sha256:f62d7009f8bac954a20e1b03c5fdfd4c1542f310c86e85d925e7fefd4d2e4f4e",
+    "signature": "UKghQziM/q5nwhh62/7NdgdLgCOyJ8SxBKahXDyXs6RtNt45PADZk3Z/ASGEyuJJ5BzYofBQ60g0KGe6Sa85DA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}
