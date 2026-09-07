@@ -3,8 +3,8 @@
   "catalogueId": "com.hestora.official",
   "channel": "development",
   "platform": "macos-arm64",
-  "generatedAt": "2026-09-06T10:18:24.000Z",
-  "expiresAt": "2026-09-12T10:18:24.000Z",
+  "generatedAt": "2026-09-07T09:17:40.246Z",
+  "expiresAt": "2026-09-13T09:17:40.246Z",
   "entries": [
     {
       "entry": {
@@ -364,6 +364,115 @@
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
         "signedEntryDigest": "sha256:0c7fcd0a9b5ceeb408fcb46937f44e3a502256cb6088357c24826f5ea4cb2cf2",
         "signature": "Hw2SJ6+cwdnxeOIHXrrAWvMvc3bZMvMWHZYI7St8ZIl62ygiDPR2Xgsc1aQUSOHFGs/OjZN2xdwm6zeEXSwoAA==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora development catalogue signing"
+      }
+    },
+    {
+      "entry": {
+        "schemaVersion": "1.0.0",
+        "plugin": {
+          "id": "com.hestora.jira-cloud",
+          "packageVersion": "1.1.0",
+          "manifestVersion": "1.0.0",
+          "displayName": "Jira Cloud",
+          "description": "Project-scoped Jira issue intake through Hestora's connector broker.",
+          "publisher": {
+            "id": "com.hestora",
+            "displayName": "Hestora",
+            "trustClaim": "hestora-in-house"
+          },
+          "category": "work-management",
+          "tags": [
+            "jira",
+            "read-only",
+            "tickets"
+          ]
+        },
+        "compatibility": {
+          "appVersionRange": ">=0.8.0-beta.5.104 <0.9.0",
+          "platforms": [
+            "macos-arm64"
+          ]
+        },
+        "channel": "development",
+        "permissions": [
+          {
+            "capability": "network-egress",
+            "required": true,
+            "reason": "Read selected Jira issues through Atlassian Cloud APIs.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "/rest/api/3/search/jql",
+              "/rest/api/3/myself",
+              "/rest/api/3/project/*",
+              "/rest/api/3/serverInfo"
+            ],
+            "networkHosts": [
+              "api.atlassian.com",
+              "*.atlassian.net"
+            ],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "connector-read",
+            "required": true,
+            "reason": "Project selected Jira issues into the matching Hestora project.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "jira:issues"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "secrets-use",
+            "required": true,
+            "reason": "Use one opaque Jira credential stored by the operating system.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [],
+            "resourcePatterns": [
+              "keychain:jira-cloud"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          }
+        ],
+        "package": {
+          "path": "packages/com.hestora.jira-cloud/1.1.0/Hestora_Jira_Cloud_1.1.0.hestora-plugin",
+          "sizeBytes": 3677,
+          "archiveDigest": "sha256:8e9a26cd711856ba968e843eb010d23857c712632f5e6a5d86fc0996f2e5815f",
+          "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f",
+          "contentDigest": "sha256:fc96b3f7d148fd196b1e2b8dad46a61e8618f76a437664a086063be96fcadc85",
+          "signature": {
+            "scheme": "organization-signature-v1",
+            "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+            "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f",
+            "signedContentDigest": "sha256:fc96b3f7d148fd196b1e2b8dad46a61e8618f76a437664a086063be96fcadc85",
+            "signature": "TwtNXnIWDkJUSsSkX/FgR9hUfCDtIWHfy9cuoAvpmM15I1xmmdeOh85XysDrbRmKUbdYuZ27aLMb1NEnmqm4CA==",
+            "publisherIdentity": "com.hestora",
+            "certificateIssuer": "Hestora alpha release signing"
+          }
+        },
+        "publishedAt": "2026-09-07T09:02:05.593Z"
+      },
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "environment": "development",
+        "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+        "signedEntryDigest": "sha256:7f5faa9e6d7f3c5029e670f8cbccbf12a09ddb95b90c4472255deaf353cbdbdd",
+        "signature": "iSuvQRFaKcOQPUntAsWIsdcAR7oaJB9XIR5SU6x9z7Zpn0qjNiRckgSbVDP4JywHF4fsrt1gtYL8PzeizysPCg==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }

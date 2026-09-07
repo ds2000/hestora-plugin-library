@@ -4,8 +4,8 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-09-06T10:18:24.000Z",
-  "expiresAt": "2026-09-12T10:18:24.000Z",
+  "generatedAt": "2026-09-07T09:17:40.246Z",
+  "expiresAt": "2026-09-13T09:17:40.246Z",
   "packages": [
     {
       "pluginId": "com.hestora.codex-cli",
@@ -15,6 +15,13 @@
       "bundleDigest": "sha256:b8442089058edd3fc47e3002fe7d043d76cce9982867573a3a820df3cc144782"
     },
     {
+      "pluginId": "com.hestora.gmail",
+      "version": "0.1.0",
+      "packagePath": "packages/com.hestora.gmail/0.1.0/Hestora_Gmail_0.1.0.hestora-plugin",
+      "archiveDigest": "sha256:40bcd940a0545b6b8c6d97a45a4edf70b646e6661a9005e2b1c28f74498e4fae",
+      "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c"
+    },
+    {
       "pluginId": "com.hestora.grafana-otlp",
       "version": "0.1.0",
       "packagePath": "packages/com.hestora.grafana-otlp/0.1.0/Hestora_Grafana_OTLP_0.1.0.hestora-plugin",
@@ -22,11 +29,11 @@
       "bundleDigest": "sha256:8b41d26d3051f16f95cf67fac1b466a136bfb4b4fd203bcad804bcb01496bc05"
     },
     {
-      "pluginId": "com.hestora.gmail",
-      "version": "0.1.0",
-      "packagePath": "packages/com.hestora.gmail/0.1.0/Hestora_Gmail_0.1.0.hestora-plugin",
-      "archiveDigest": "sha256:40bcd940a0545b6b8c6d97a45a4edf70b646e6661a9005e2b1c28f74498e4fae",
-      "bundleDigest": "sha256:2b91e03296d2889db26893956b534d76f28f37693196c45a7c91ba606600919c"
+      "pluginId": "com.hestora.jira-cloud",
+      "version": "1.1.0",
+      "packagePath": "packages/com.hestora.jira-cloud/1.1.0/Hestora_Jira_Cloud_1.1.0.hestora-plugin",
+      "archiveDigest": "sha256:8e9a26cd711856ba968e843eb010d23857c712632f5e6a5d86fc0996f2e5815f",
+      "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f"
     },
     {
       "pluginId": "com.hestora.lm-studio",

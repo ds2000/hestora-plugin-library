@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Jira_Cloud_1.1.0.hestora-plugin",
+    "sizeBytes": 3677,
+    "archiveDigest": "sha256:8e9a26cd711856ba968e843eb010d23857c712632f5e6a5d86fc0996f2e5815f"
+  },
+  "manifest": {
+    "id": "com.hestora.jira-cloud",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "1.1.0",
+    "appVersionRange": ">=0.8.0-beta.5.104 <0.9.0",
+    "displayName": "Jira Cloud",
+    "description": "Project-scoped Jira issue intake through Hestora's connector broker.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary alpha",
+    "executionMode": "remote-service",
+    "entrypoint": {
+      "kind": "remote-service",
+      "baseUrl": "https://api.atlassian.com",
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "connector",
+        "connectorType": "jira-cloud",
+        "adapterProtocol": "rest"
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "Read selected Jira issues through Atlassian Cloud APIs.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "/rest/api/3/search/jql",
+          "/rest/api/3/myself",
+          "/rest/api/3/project/*",
+          "/rest/api/3/serverInfo"
+        ],
+        "networkHosts": [
+          "api.atlassian.com",
+          "*.atlassian.net"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "connector-read",
+        "required": true,
+        "reason": "Project selected Jira issues into the matching Hestora project.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "jira:issues"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": true,
+        "reason": "Use one opaque Jira credential stored by the operating system.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "keychain:jira-cloud"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "preview",
+    "contentDigest": "sha256:fc96b3f7d148fd196b1e2b8dad46a61e8618f76a437664a086063be96fcadc85"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+    "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f",
+    "signedContentDigest": "sha256:fc96b3f7d148fd196b1e2b8dad46a61e8618f76a437664a086063be96fcadc85",
+    "signature": "TwtNXnIWDkJUSsSkX/FgR9hUfCDtIWHfy9cuoAvpmM15I1xmmdeOh85XysDrbRmKUbdYuZ27aLMb1NEnmqm4CA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}

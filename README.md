@@ -21,6 +21,7 @@ permissions, change a package or redirect a download without producing new valid
 - Codex CLI adapter `1.1.0`
 - Gmail `0.1.0`
 - Grafana OTLP `0.1.0`
+- Jira Cloud `1.1.0`
 - LM Studio `0.2.0`
 - Ollama local models `0.5.0`
 - Zoho Mail `0.1.0`
@@ -32,6 +33,12 @@ OAuth client secret, provider credential, refresh token, mailbox content or mode
 The Codex package supplies isolated admission checks and enables Hestora's native provider broker.
 Installation requires a project grant, successful isolation and behaviour checks, and explicit
 enablement. An existing Codex CLI login does not bypass these steps.
+
+Jira Cloud requires Hestora `0.8.0-beta.5.104` or newer with the September 7 Jira pilot update.
+It supports separate connections for multiple accounts/sites and verifies identity, project and JQL
+before saving. Sync is a separate read-only action. Scoped API tokens use the Atlassian API gateway;
+legacy unscoped tokens are available under Advanced. Browser OAuth and Jira write-back are not
+included in this pilot. Start with a narrowly scoped filter and a few known tickets.
 
 ## Publication
 
