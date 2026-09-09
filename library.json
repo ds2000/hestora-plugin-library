@@ -4,9 +4,16 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-09-07T09:17:40.246Z",
-  "expiresAt": "2026-09-13T09:17:40.246Z",
+  "generatedAt": "2026-09-09T08:15:56.994Z",
+  "expiresAt": "2026-09-15T08:15:56.994Z",
   "packages": [
+    {
+      "pluginId": "com.hestora.claude-code",
+      "version": "1.1.0",
+      "packagePath": "packages/com.hestora.claude-code/1.1.0/Hestora_Claude_Code_1.1.0.hestora-plugin",
+      "archiveDigest": "sha256:0bfeded501bf847dc91d7b00b0972a315e4d7a8e891ab8fd5ff816ad17c36038",
+      "bundleDigest": "sha256:f0d1fd2e38f8941d16fe1ef175a59ee4122199ef951c7f2f5f1723e0e285c0b9"
+    },
     {
       "pluginId": "com.hestora.codex-cli",
       "version": "1.1.0",

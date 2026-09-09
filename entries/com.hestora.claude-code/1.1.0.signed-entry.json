@@ -1,0 +1,92 @@
+{
+  "entry": {
+    "schemaVersion": "1.0.0",
+    "plugin": {
+      "id": "com.hestora.claude-code",
+      "packageVersion": "1.1.0",
+      "manifestVersion": "1.0.0",
+      "displayName": "Claude Code adapter",
+      "description": "Admission profile for governed Claude Code sessions through Hestora's isolated native adapter.",
+      "publisher": {
+        "id": "com.hestora",
+        "displayName": "Hestora",
+        "trustClaim": "hestora-in-house"
+      },
+      "category": "ai-agent",
+      "tags": [
+        "anthropic",
+        "cli",
+        "coding"
+      ]
+    },
+    "compatibility": {
+      "appVersionRange": ">=0.8.0-beta.5.105.1 <0.9.0",
+      "platforms": [
+        "macos-arm64"
+      ]
+    },
+    "channel": "development",
+    "permissions": [
+      {
+        "capability": "process-execute",
+        "required": true,
+        "reason": "Start the signed Claude Code admission adapter inside Hestora's restricted plugin host.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "bin/hestora-provider-adapter"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.claude-code"
+        ]
+      },
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Receive one bounded task capsule for an assigned project.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "public",
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "project:task-capsule"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": [
+          "ext.hestora.claude-code"
+        ]
+      }
+    ],
+    "package": {
+      "path": "packages/com.hestora.claude-code/1.1.0/Hestora_Claude_Code_1.1.0.hestora-plugin",
+      "sizeBytes": 356423,
+      "archiveDigest": "sha256:0bfeded501bf847dc91d7b00b0972a315e4d7a8e891ab8fd5ff816ad17c36038",
+      "bundleDigest": "sha256:f0d1fd2e38f8941d16fe1ef175a59ee4122199ef951c7f2f5f1723e0e285c0b9",
+      "contentDigest": "sha256:0b2ca0d7bf367c7462810e5da678f617f986fb06375b7aa83c9f94ff7af4aa00",
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
+        "bundleDigest": "sha256:f0d1fd2e38f8941d16fe1ef175a59ee4122199ef951c7f2f5f1723e0e285c0b9",
+        "signedContentDigest": "sha256:0b2ca0d7bf367c7462810e5da678f617f986fb06375b7aa83c9f94ff7af4aa00",
+        "signature": "Cq+TC+hqPTqlH/bdUm0ZMsZQK3dBdAPx4ijuNBX9DiUYc0L6edXdoHYdOh66yUTRULZuGUWmxu0N9LPopjknBw==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora alpha release signing"
+      }
+    },
+    "publishedAt": "2026-09-09T08:12:09.355Z"
+  },
+  "signature": {
+    "scheme": "organization-signature-v1",
+    "environment": "development",
+    "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+    "signedEntryDigest": "sha256:50bdd5228aa2d101df76dd67f570776ca025117cb8a21b48dcac9f18586fbf6f",
+    "signature": "/iKYjOn+5wdV4D+9JR+Cuq1K4Qhm4HfJ9g8lSoFQrUnEbJwMBWUD+FBsld4t5MZgmIrjZph/PAhHZ1bdNpxGAw==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora development catalogue signing"
+  }
+}

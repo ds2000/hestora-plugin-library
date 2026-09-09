@@ -18,6 +18,7 @@ permissions, change a package or redirect a download without producing new valid
 
 ## Current development packages
 
+- Claude Code adapter `1.1.0`
 - Codex CLI adapter `1.1.0`
 - Gmail `0.1.0`
 - Grafana OTLP `0.1.0`
@@ -33,6 +34,13 @@ OAuth client secret, provider credential, refresh token, mailbox content or mode
 The Codex package supplies isolated admission checks and enables Hestora's native provider broker.
 Installation requires a project grant, successful isolation and behaviour checks, and explicit
 enablement. An existing Codex CLI login does not bypass these steps.
+
+Claude Code `1.1.0` supports Hestora `0.8.0-beta.5.105.1` and later. Refresh the library, install,
+check isolation and behaviour, then enable it for selected projects. It uses the existing native
+Claude broker and provider-owned sign-in, not a redistributed CLI or copied subscription token.
+On older betas, configure sign-in and project grants under **Settings → CLI accounts**. The newer
+guided Configure dialog and official provider icon require the next host UI build; a library
+refresh alone cannot replace application screens. A login check is not a live inference test.
 
 Jira Cloud requires Hestora `0.8.0-beta.5.104` or newer with the September 7 Jira pilot update.
 It supports separate connections for multiple accounts/sites and verifies identity, project and JQL
