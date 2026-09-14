@@ -22,7 +22,7 @@ permissions, change a package or redirect a download without producing new valid
 - Codex CLI adapter `1.1.0`
 - Gmail `0.1.0`
 - Grafana OTLP `0.1.0`
-- Jira Cloud `1.1.0`
+- Jira Cloud `1.2.0`
 - LM Studio `0.2.0`
 - Ollama local models `0.5.0`
 - Zoho Mail `0.1.0`
@@ -45,8 +45,12 @@ refresh alone cannot replace application screens. A login check is not a live in
 Jira Cloud requires Hestora `0.8.0-beta.5.104` or newer with the September 7 Jira pilot update.
 It supports separate connections for multiple accounts/sites and verifies identity, project and JQL
 before saving. Sync is a separate read-only action. Scoped API tokens use the Atlassian API gateway;
-legacy unscoped tokens are available under Advanced. Browser OAuth and Jira write-back are not
-included in this pilot. Start with a narrowly scoped filter and a few known tickets.
+legacy unscoped tokens are available under Advanced. Jira Cloud `1.2.0` adds publication of an
+exact, reviewed support-update draft through the host broker. Updating requires review of the new
+`jira:comments` write permission; it never grants missing Jira-side account or API-token permissions.
+Intake remains read-only, and installation never posts a comment. Use Hestora beta `5.109.4` for
+the accompanying draft, connection-recovery, retained-formatting and closed-ticket sync fixes.
+Browser OAuth is not included. Start with a narrowly scoped filter and a few known tickets.
 
 ## Publication
 

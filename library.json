@@ -4,8 +4,8 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-09-09T08:15:56.994Z",
-  "expiresAt": "2026-09-15T08:15:56.994Z",
+  "generatedAt": "2026-09-14T19:30:37.397Z",
+  "expiresAt": "2026-09-20T19:30:37.397Z",
   "packages": [
     {
       "pluginId": "com.hestora.claude-code",
@@ -37,10 +37,10 @@
     },
     {
       "pluginId": "com.hestora.jira-cloud",
-      "version": "1.1.0",
-      "packagePath": "packages/com.hestora.jira-cloud/1.1.0/Hestora_Jira_Cloud_1.1.0.hestora-plugin",
-      "archiveDigest": "sha256:8e9a26cd711856ba968e843eb010d23857c712632f5e6a5d86fc0996f2e5815f",
-      "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f"
+      "version": "1.2.0",
+      "packagePath": "packages/com.hestora.jira-cloud/1.2.0/Hestora_Jira_Cloud_1.2.0.hestora-plugin",
+      "archiveDigest": "sha256:8f476944111e0bddb4d13a1bd069f35f9a459e700603707614ac4621921c1f85",
+      "bundleDigest": "sha256:e30f0ccb288acdcb4f2fedc902dd6a5b713b73a839fd1c26c1940aec0ee4732d"
     },
     {
       "pluginId": "com.hestora.lm-studio",

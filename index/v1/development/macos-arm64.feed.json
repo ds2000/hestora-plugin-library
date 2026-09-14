@@ -3,8 +3,8 @@
   "catalogueId": "com.hestora.official",
   "channel": "development",
   "platform": "macos-arm64",
-  "generatedAt": "2026-09-09T08:15:56.994Z",
-  "expiresAt": "2026-09-15T08:15:56.994Z",
+  "generatedAt": "2026-09-14T19:30:37.397Z",
+  "expiresAt": "2026-09-20T19:30:37.397Z",
   "entries": [
     {
       "entry": {
@@ -465,7 +465,7 @@
         "schemaVersion": "1.0.0",
         "plugin": {
           "id": "com.hestora.jira-cloud",
-          "packageVersion": "1.1.0",
+          "packageVersion": "1.2.0",
           "manifestVersion": "1.0.0",
           "displayName": "Jira Cloud",
           "description": "Project-scoped Jira issue intake through Hestora's connector broker.",
@@ -503,7 +503,8 @@
               "/rest/api/3/search/jql",
               "/rest/api/3/myself",
               "/rest/api/3/project/*",
-              "/rest/api/3/serverInfo"
+              "/rest/api/3/serverInfo",
+              "/rest/api/3/issue/*"
             ],
             "networkHosts": [
               "api.atlassian.com",
@@ -528,6 +529,22 @@
             "providerManifestIds": []
           },
           {
+            "capability": "connector-write",
+            "required": true,
+            "reason": "Post only an exact support-update draft explicitly reviewed and approved by the user. Intake remains read-only.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "jira:comments"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
             "capability": "secrets-use",
             "required": true,
             "reason": "Use one opaque Jira credential stored by the operating system.",
@@ -542,29 +559,29 @@
           }
         ],
         "package": {
-          "path": "packages/com.hestora.jira-cloud/1.1.0/Hestora_Jira_Cloud_1.1.0.hestora-plugin",
-          "sizeBytes": 3677,
-          "archiveDigest": "sha256:8e9a26cd711856ba968e843eb010d23857c712632f5e6a5d86fc0996f2e5815f",
-          "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f",
-          "contentDigest": "sha256:fc96b3f7d148fd196b1e2b8dad46a61e8618f76a437664a086063be96fcadc85",
+          "path": "packages/com.hestora.jira-cloud/1.2.0/Hestora_Jira_Cloud_1.2.0.hestora-plugin",
+          "sizeBytes": 4598,
+          "archiveDigest": "sha256:8f476944111e0bddb4d13a1bd069f35f9a459e700603707614ac4621921c1f85",
+          "bundleDigest": "sha256:e30f0ccb288acdcb4f2fedc902dd6a5b713b73a839fd1c26c1940aec0ee4732d",
+          "contentDigest": "sha256:5082e65216e536d9d3f8ccd0ed6b188a019a3dd3f23e6e764149d1db6d5e95d2",
           "signature": {
             "scheme": "organization-signature-v1",
             "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
-            "bundleDigest": "sha256:068bf0522445165dacc4fa70ea4436cbfb6154322324f6f8ca7fd33520f0d70f",
-            "signedContentDigest": "sha256:fc96b3f7d148fd196b1e2b8dad46a61e8618f76a437664a086063be96fcadc85",
-            "signature": "TwtNXnIWDkJUSsSkX/FgR9hUfCDtIWHfy9cuoAvpmM15I1xmmdeOh85XysDrbRmKUbdYuZ27aLMb1NEnmqm4CA==",
+            "bundleDigest": "sha256:e30f0ccb288acdcb4f2fedc902dd6a5b713b73a839fd1c26c1940aec0ee4732d",
+            "signedContentDigest": "sha256:5082e65216e536d9d3f8ccd0ed6b188a019a3dd3f23e6e764149d1db6d5e95d2",
+            "signature": "e/Qk3PLEYFHYXCchgxW+VEhukJrNJgIDlPrTrJqp4gI61z1QsSSsj6gJc1OsI/JqBNpZ7Ej9R4uDl35CazqtAw==",
             "publisherIdentity": "com.hestora",
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-09-07T09:02:05.593Z"
+        "publishedAt": "2026-09-14T19:28:20.907Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:7f5faa9e6d7f3c5029e670f8cbccbf12a09ddb95b90c4472255deaf353cbdbdd",
-        "signature": "iSuvQRFaKcOQPUntAsWIsdcAR7oaJB9XIR5SU6x9z7Zpn0qjNiRckgSbVDP4JywHF4fsrt1gtYL8PzeizysPCg==",
+        "signedEntryDigest": "sha256:0a7a5b7100c72217a539b35622e7560c47374c45269b9aa75aca5f9ca7173588",
+        "signature": "BuQdOW2F75heEf3UKY2yk9JH92BXlFcJ55JDd1k4/eSWsvIpqHkY+ZA9gMc8P6YjjPuCbDjCKn2DyZ1OcosKDQ==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }
