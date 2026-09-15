@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Constellation_0.1.0.hestora-plugin",
+    "sizeBytes": 2825,
+    "archiveDigest": "sha256:5e11b1d45c469bd6888f1044cb1c170f7b0b45d6562b2606855247e1e5a1b8be"
+  },
+  "manifest": {
+    "id": "com.hestora.constellation",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "0.1.0",
+    "appVersionRange": ">=0.8.0-beta.5.109.0 <0.9.0",
+    "displayName": "Constellation",
+    "description": "A living project star map with explainable attention, dependency links and shared display care.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary",
+    "executionMode": "declarative-only",
+    "contributions": [
+      {
+        "type": "declarative-view",
+        "viewId": "constellation",
+        "surface": "project",
+        "viewSchemaVersion": "1.0.0"
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Display recorded workflows only in the projects you select.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal"
+        ],
+        "resourcePatterns": [],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "ui-contribute",
+        "required": true,
+        "reason": "Offer an optional project visualisation rendered by Hestora.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal"
+        ],
+        "resourcePatterns": [],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "development",
+    "contentDigest": "sha256:e6317d8b4c6c03a5b0ad43dd08dd6072eb994cf49e8325c7d768dde610180242"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+    "bundleDigest": "sha256:f15100d3b62a1fbf769aeea3ea94a758171f5856df80c4bf99c45fcf8388b3ae",
+    "signedContentDigest": "sha256:e6317d8b4c6c03a5b0ad43dd08dd6072eb994cf49e8325c7d768dde610180242",
+    "signature": "dFEkZmbXjvc99rNvpCFhEan54DZZT6RsCcZJcDpnHlj1K5chTzR2MQ5N5GnKSpqwA2muTJmsphAeinmQZTMUBA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}

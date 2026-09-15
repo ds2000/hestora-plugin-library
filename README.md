@@ -20,6 +20,7 @@ permissions, change a package or redirect a download without producing new valid
 
 - Claude Code adapter `1.1.0`
 - Codex CLI adapter `1.1.0`
+- Constellation `0.1.0`
 - Gmail `0.1.0`
 - Grafana OTLP `0.1.0`
 - Jira Cloud `1.2.0`
@@ -51,6 +52,27 @@ exact, reviewed support-update draft through the host broker. Updating requires 
 Intake remains read-only, and installation never posts a comment. Use Hestora beta `5.109.4` for
 the accompanying draft, connection-recovery, retained-formatting and closed-ticket sync fixes.
 Browser OAuth is not included. Start with a narrowly scoped filter and a few known tickets.
+
+### Constellation
+
+Use Hestora beta `5.109.4` for the current project and workspace Observatory. In **Settings →
+Extensions**, refresh the library, review Constellation, install it and enable it for the projects
+you choose. Open **Observatory** inside a project, or **Workspace observatory** from Mission Control.
+**Separate window** creates a window you can move to another display.
+
+Hover or keyboard-focus a star for a glance; click to pin it. Follow its relationships, open its
+workflow and use **Back → Observatory** to return to the same selection and viewpoint. Retained
+source-only reference tickets link to their source without creating a workflow. Large groups are
+paged; search and List view provide an alternative to the map.
+
+This is a signed, declarative visualisation: no executable plugin code, connector credentials,
+network access or data export. It displays authorised, retained project records; it does not sync
+remote boards, start investigations or spend AI tokens. Other source plugins own intake scopes.
+Workspace projects remain separate. Constellation is the first released view; Atlas and Signal
+Loom remain concepts.
+
+Display care includes gentle drift, motion pause, idle dimming and blanking. Reduce Motion is
+honoured. Keep the display's own protection enabled; movement cannot guarantee against burn-in.
 
 ## Publication
 

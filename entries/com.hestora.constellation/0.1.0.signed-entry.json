@@ -1,0 +1,85 @@
+{
+  "entry": {
+    "schemaVersion": "1.0.0",
+    "plugin": {
+      "id": "com.hestora.constellation",
+      "packageVersion": "0.1.0",
+      "manifestVersion": "1.0.0",
+      "displayName": "Constellation",
+      "description": "A living project star map with explainable attention, dependency links and shared display care.",
+      "publisher": {
+        "id": "com.hestora",
+        "displayName": "Hestora",
+        "trustClaim": "hestora-in-house"
+      },
+      "category": "visualisation",
+      "tags": [
+        "constellation",
+        "project",
+        "read-only",
+        "visualisation"
+      ]
+    },
+    "compatibility": {
+      "appVersionRange": ">=0.8.0-beta.5.109.0 <0.9.0",
+      "platforms": [
+        "macos-arm64"
+      ]
+    },
+    "channel": "development",
+    "permissions": [
+      {
+        "capability": "project-read",
+        "required": true,
+        "reason": "Display recorded workflows only in the projects you select.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal"
+        ],
+        "resourcePatterns": [],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "ui-contribute",
+        "required": true,
+        "reason": "Offer an optional project visualisation rendered by Hestora.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal"
+        ],
+        "resourcePatterns": [],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "package": {
+      "path": "packages/com.hestora.constellation/0.1.0/Hestora_Constellation_0.1.0.hestora-plugin",
+      "sizeBytes": 2825,
+      "archiveDigest": "sha256:5e11b1d45c469bd6888f1044cb1c170f7b0b45d6562b2606855247e1e5a1b8be",
+      "bundleDigest": "sha256:f15100d3b62a1fbf769aeea3ea94a758171f5856df80c4bf99c45fcf8388b3ae",
+      "contentDigest": "sha256:e6317d8b4c6c03a5b0ad43dd08dd6072eb994cf49e8325c7d768dde610180242",
+      "signature": {
+        "scheme": "organization-signature-v1",
+        "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+        "bundleDigest": "sha256:f15100d3b62a1fbf769aeea3ea94a758171f5856df80c4bf99c45fcf8388b3ae",
+        "signedContentDigest": "sha256:e6317d8b4c6c03a5b0ad43dd08dd6072eb994cf49e8325c7d768dde610180242",
+        "signature": "dFEkZmbXjvc99rNvpCFhEan54DZZT6RsCcZJcDpnHlj1K5chTzR2MQ5N5GnKSpqwA2muTJmsphAeinmQZTMUBA==",
+        "publisherIdentity": "com.hestora",
+        "certificateIssuer": "Hestora alpha release signing"
+      }
+    },
+    "publishedAt": "2026-09-15T10:39:39.454Z"
+  },
+  "signature": {
+    "scheme": "organization-signature-v1",
+    "environment": "development",
+    "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
+    "signedEntryDigest": "sha256:8020fadba78f9f4776fa2fde1d2e43bebf99ebb201878dd58a96a9fb1c2682f0",
+    "signature": "kbD8Gj2Zw2ZkaaaMoRv1WWHaXKdSAngQtch18uJsyIWRUgJoXfB/pqFaaDGPJz78wu/cVluTRJn2nJpxa9gKCA==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora development catalogue signing"
+  }
+}

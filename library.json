@@ -4,8 +4,8 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-09-14T19:30:37.397Z",
-  "expiresAt": "2026-09-20T19:30:37.397Z",
+  "generatedAt": "2026-09-15T10:39:39.459Z",
+  "expiresAt": "2026-09-21T10:39:39.459Z",
   "packages": [
     {
       "pluginId": "com.hestora.claude-code",
@@ -20,6 +20,13 @@
       "packagePath": "packages/com.hestora.codex-cli/1.1.0/Hestora_Codex_CLI_1.1.0.hestora-plugin",
       "archiveDigest": "sha256:1ec8997193789d95311536bb3118aba87b4dc5f94f1321f959135dcf32504d8e",
       "bundleDigest": "sha256:b8442089058edd3fc47e3002fe7d043d76cce9982867573a3a820df3cc144782"
+    },
+    {
+      "pluginId": "com.hestora.constellation",
+      "version": "0.1.0",
+      "packagePath": "packages/com.hestora.constellation/0.1.0/Hestora_Constellation_0.1.0.hestora-plugin",
+      "archiveDigest": "sha256:5e11b1d45c469bd6888f1044cb1c170f7b0b45d6562b2606855247e1e5a1b8be",
+      "bundleDigest": "sha256:f15100d3b62a1fbf769aeea3ea94a758171f5856df80c4bf99c45fcf8388b3ae"
     },
     {
       "pluginId": "com.hestora.gmail",
