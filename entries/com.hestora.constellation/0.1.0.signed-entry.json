@@ -12,7 +12,7 @@
         "displayName": "Hestora",
         "trustClaim": "hestora-in-house"
       },
-      "category": "visualisation",
+      "category": "developer-tool",
       "tags": [
         "constellation",
         "project",
@@ -71,14 +71,14 @@
         "certificateIssuer": "Hestora alpha release signing"
       }
     },
-    "publishedAt": "2026-09-15T10:39:39.454Z"
+    "publishedAt": "2026-09-15T10:50:45.557Z"
   },
   "signature": {
     "scheme": "organization-signature-v1",
     "environment": "development",
     "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-    "signedEntryDigest": "sha256:8020fadba78f9f4776fa2fde1d2e43bebf99ebb201878dd58a96a9fb1c2682f0",
-    "signature": "kbD8Gj2Zw2ZkaaaMoRv1WWHaXKdSAngQtch18uJsyIWRUgJoXfB/pqFaaDGPJz78wu/cVluTRJn2nJpxa9gKCA==",
+    "signedEntryDigest": "sha256:793d103b68acd54a6ed83b381f750549e956c0fb4454e73b71bc65977d201503",
+    "signature": "EvSY/qe9WATOjh9qbheRt5L9GM7HfnsQCcy4X2tIkQyfSVN+VpFIaQ7CgfTIpBdkJ68qwl8zK2B95+q7BwSYAQ==",
     "publisherIdentity": "com.hestora",
     "certificateIssuer": "Hestora development catalogue signing"
   }

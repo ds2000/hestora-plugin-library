@@ -4,8 +4,8 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-09-15T10:39:39.459Z",
-  "expiresAt": "2026-09-21T10:39:39.459Z",
+  "generatedAt": "2026-09-15T10:50:45.565Z",
+  "expiresAt": "2026-09-21T10:50:45.565Z",
   "packages": [
     {
       "pluginId": "com.hestora.claude-code",
