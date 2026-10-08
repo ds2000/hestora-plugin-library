@@ -3,8 +3,8 @@
   "catalogueId": "com.hestora.official",
   "channel": "development",
   "platform": "macos-arm64",
-  "generatedAt": "2026-10-06T18:18:36.720Z",
-  "expiresAt": "2026-10-12T18:18:36.720Z",
+  "generatedAt": "2026-10-08T01:00:00.000Z",
+  "expiresAt": "2026-10-14T01:00:00.000Z",
   "entries": [
     {
       "entry": {
@@ -550,7 +550,7 @@
         "schemaVersion": "1.0.0",
         "plugin": {
           "id": "com.hestora.jira-cloud",
-          "packageVersion": "1.2.0",
+          "packageVersion": "1.5.0",
           "manifestVersion": "1.0.0",
           "displayName": "Jira Cloud",
           "description": "Project-scoped Jira issue intake through Hestora's connector broker.",
@@ -567,7 +567,7 @@
           ]
         },
         "compatibility": {
-          "appVersionRange": ">=0.8.0-beta.5.104 <0.9.0",
+          "appVersionRange": ">=0.8.0-beta.5.109.38 <0.9.0",
           "platforms": [
             "macos-arm64"
           ]
@@ -589,7 +589,9 @@
               "/rest/api/3/myself",
               "/rest/api/3/project/*",
               "/rest/api/3/serverInfo",
-              "/rest/api/3/issue/*"
+              "/rest/api/3/issue/*",
+              "/rest/api/3/mypermissions",
+              "/_edge/tenant_info"
             ],
             "networkHosts": [
               "api.atlassian.com",
@@ -630,6 +632,38 @@
             "providerManifestIds": []
           },
           {
+            "capability": "connector-write",
+            "required": true,
+            "reason": "Assign a selected ticket to the connected account only after exact-change review, with a fresh source check and read-back verification. No automatic retries.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "jira:assignment"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
+            "capability": "connector-write",
+            "required": true,
+            "reason": "Apply an available, form-free Jira status transition only after exact-change review and verify the resulting status. Intake never changes tickets.",
+            "identityProfileScope": "selected",
+            "projectScope": "selected",
+            "allowedClassifications": [
+              "internal",
+              "confidential"
+            ],
+            "resourcePatterns": [
+              "jira:transitions"
+            ],
+            "networkHosts": [],
+            "providerManifestIds": []
+          },
+          {
             "capability": "secrets-use",
             "required": true,
             "reason": "Use one opaque Jira credential stored by the operating system.",
@@ -644,29 +678,29 @@
           }
         ],
         "package": {
-          "path": "packages/com.hestora.jira-cloud/1.2.0/Hestora_Jira_Cloud_1.2.0.hestora-plugin",
-          "sizeBytes": 4598,
-          "archiveDigest": "sha256:8f476944111e0bddb4d13a1bd069f35f9a459e700603707614ac4621921c1f85",
-          "bundleDigest": "sha256:e30f0ccb288acdcb4f2fedc902dd6a5b713b73a839fd1c26c1940aec0ee4732d",
-          "contentDigest": "sha256:5082e65216e536d9d3f8ccd0ed6b188a019a3dd3f23e6e764149d1db6d5e95d2",
+          "path": "packages/com.hestora.jira-cloud/1.5.0/Hestora_Jira_Cloud_1.5.0.hestora-plugin",
+          "sizeBytes": 10468,
+          "archiveDigest": "sha256:4a02539678398fbb162685bb03e80d791ad9d814546bf7b4486757ad31c5872c",
+          "bundleDigest": "sha256:fdf0a9d9429411e53710d2299f973d756cd89a00f871b9d2b093e05b5785005e",
+          "contentDigest": "sha256:c955e8ecd4240bc7cc30201b783f0323302b6517cd0a8857fba385b19d1044d9",
           "signature": {
             "scheme": "organization-signature-v1",
-            "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
-            "bundleDigest": "sha256:e30f0ccb288acdcb4f2fedc902dd6a5b713b73a839fd1c26c1940aec0ee4732d",
-            "signedContentDigest": "sha256:5082e65216e536d9d3f8ccd0ed6b188a019a3dd3f23e6e764149d1db6d5e95d2",
-            "signature": "e/Qk3PLEYFHYXCchgxW+VEhukJrNJgIDlPrTrJqp4gI61z1QsSSsj6gJc1OsI/JqBNpZ7Ej9R4uDl35CazqtAw==",
+            "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+            "bundleDigest": "sha256:fdf0a9d9429411e53710d2299f973d756cd89a00f871b9d2b093e05b5785005e",
+            "signedContentDigest": "sha256:c955e8ecd4240bc7cc30201b783f0323302b6517cd0a8857fba385b19d1044d9",
+            "signature": "8yYT/xESaVNX5jv+3gAmaaAz9yTfhAq3SJl1Swj9jokyNjjHYDFWldtnBsblga4To3EGOkFoSLhIKialacKSDw==",
             "publisherIdentity": "com.hestora",
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-09-14T19:28:20.907Z"
+        "publishedAt": "2026-10-08T00:57:57.092Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:0a7a5b7100c72217a539b35622e7560c47374c45269b9aa75aca5f9ca7173588",
-        "signature": "BuQdOW2F75heEf3UKY2yk9JH92BXlFcJ55JDd1k4/eSWsvIpqHkY+ZA9gMc8P6YjjPuCbDjCKn2DyZ1OcosKDQ==",
+        "signedEntryDigest": "sha256:6004f1927a703f5b326c040c84197ef9e42da7fa6d9959772de426dcd1d23a05",
+        "signature": "bG5RxzNi2PMhqtUZT4bMuQyZf+F9pzUkOkDKyQhcxUxVfnA6WZzFjyRBSQpUP8bgI9e4voFuoZw0V7avWwhWDg==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }

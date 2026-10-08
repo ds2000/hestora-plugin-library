@@ -23,7 +23,7 @@ permissions, change a package or redirect a download without producing new valid
 - Constellation `0.1.0`
 - Gmail `0.1.0`
 - Grafana OTLP `0.1.0`
-- Jira Cloud `1.2.0`
+- Jira Cloud `1.5.0`
 - LM Studio `0.2.0`
 - Ollama local models `0.5.0`
 - Zoho Mail `0.1.0`
@@ -52,6 +52,16 @@ exact, reviewed support-update draft through the host broker. Updating requires 
 Intake remains read-only, and installation never posts a comment. Use Hestora beta `5.109.4` for
 the accompanying draft, connection-recovery, retained-formatting and closed-ticket sync fixes.
 Browser OAuth is not included. Start with a narrowly scoped filter and a few known tickets.
+
+Jira Cloud `1.5.0` requires Hestora `0.8.0-beta.5.109.38` or later. It adds
+separately reviewed assignment and available status changes, with fresh source
+checks, retained receipts and independent read-back verification. Its declared
+workflow plans can investigate before offering a reviewed comment, assignment or
+status change. Intake remains read-only: importing or syncing a board does not
+start AI or apply changes. Review the requested permissions and project access
+when updating; installation never changes a Jira ticket. The accompanying host
+update provides the shared action/result handoff, explicit retry history and
+evidence-backed request completion.
 
 ### Constellation
 

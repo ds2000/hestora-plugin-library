@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": {
+    "fileName": "Hestora_Jira_Cloud_1.5.0.hestora-plugin",
+    "sizeBytes": 10468,
+    "archiveDigest": "sha256:4a02539678398fbb162685bb03e80d791ad9d814546bf7b4486757ad31c5872c"
+  },
+  "manifest": {
+    "id": "com.hestora.jira-cloud",
+    "manifestVersion": "1.0.0",
+    "packageVersion": "1.5.0",
+    "appVersionRange": ">=0.8.0-beta.5.109.38 <0.9.0",
+    "displayName": "Jira Cloud",
+    "description": "Project-scoped Jira issue intake through Hestora's connector broker.",
+    "publisher": {
+      "id": "com.hestora",
+      "displayName": "Hestora"
+    },
+    "license": "Proprietary alpha",
+    "executionMode": "remote-service",
+    "entrypoint": {
+      "kind": "remote-service",
+      "baseUrl": "https://api.atlassian.com",
+      "protocolVersion": "1.0.0"
+    },
+    "contributions": [
+      {
+        "type": "connector",
+        "connectorType": "jira-cloud",
+        "adapterProtocol": "rest"
+      },
+      {
+        "type": "workflow-recipe",
+        "recipeId": "assign-reviewed-ticket"
+      },
+      {
+        "type": "workflow-recipe",
+        "recipeId": "transition-reviewed-ticket"
+      },
+      {
+        "type": "workflow-recipe",
+        "recipeId": "investigate-then-review-status"
+      }
+    ],
+    "permissions": [
+      {
+        "capability": "network-egress",
+        "required": true,
+        "reason": "Read selected Jira issues through Atlassian Cloud APIs.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "/rest/api/3/search/jql",
+          "/rest/api/3/myself",
+          "/rest/api/3/project/*",
+          "/rest/api/3/serverInfo",
+          "/rest/api/3/issue/*",
+          "/rest/api/3/mypermissions",
+          "/_edge/tenant_info"
+        ],
+        "networkHosts": [
+          "api.atlassian.com",
+          "*.atlassian.net"
+        ],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "connector-read",
+        "required": true,
+        "reason": "Project selected Jira issues into the matching Hestora project.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "jira:issues"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "connector-write",
+        "required": true,
+        "reason": "Post only an exact support-update draft explicitly reviewed and approved by the user. Intake remains read-only.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "jira:comments"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "connector-write",
+        "required": true,
+        "reason": "Assign a selected ticket to the connected account only after exact-change review, with a fresh source check and read-back verification. No automatic retries.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "jira:assignment"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "connector-write",
+        "required": true,
+        "reason": "Apply an available, form-free Jira status transition only after exact-change review and verify the resulting status. Intake never changes tickets.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [
+          "internal",
+          "confidential"
+        ],
+        "resourcePatterns": [
+          "jira:transitions"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      },
+      {
+        "capability": "secrets-use",
+        "required": true,
+        "reason": "Use one opaque Jira credential stored by the operating system.",
+        "identityProfileScope": "selected",
+        "projectScope": "selected",
+        "allowedClassifications": [],
+        "resourcePatterns": [
+          "keychain:jira-cloud"
+        ],
+        "networkHosts": [],
+        "providerManifestIds": []
+      }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "telemetry": "none",
+    "dataMigration": "none",
+    "updateChannel": "preview",
+    "contentDigest": "sha256:c955e8ecd4240bc7cc30201b783f0323302b6517cd0a8857fba385b19d1044d9"
+  },
+  "packageSignature": {
+    "scheme": "organization-signature-v1",
+    "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+    "bundleDigest": "sha256:fdf0a9d9429411e53710d2299f973d756cd89a00f871b9d2b093e05b5785005e",
+    "signedContentDigest": "sha256:c955e8ecd4240bc7cc30201b783f0323302b6517cd0a8857fba385b19d1044d9",
+    "signature": "8yYT/xESaVNX5jv+3gAmaaAz9yTfhAq3SJl1Swj9jokyNjjHYDFWldtnBsblga4To3EGOkFoSLhIKialacKSDw==",
+    "publisherIdentity": "com.hestora",
+    "certificateIssuer": "Hestora alpha release signing"
+  }
+}
