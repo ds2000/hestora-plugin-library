@@ -3,8 +3,8 @@
   "catalogueId": "com.hestora.official",
   "channel": "development",
   "platform": "macos-arm64",
-  "generatedAt": "2026-10-08T01:00:00.000Z",
-  "expiresAt": "2026-10-14T01:00:00.000Z",
+  "generatedAt": "2026-10-14T16:24:45.849Z",
+  "expiresAt": "2026-10-20T16:24:45.849Z",
   "entries": [
     {
       "entry": {
@@ -972,7 +972,7 @@
         "schemaVersion": "1.0.0",
         "plugin": {
           "id": "com.hestora.zoho-mail",
-          "packageVersion": "0.1.0",
+          "packageVersion": "0.2.1",
           "manifestVersion": "1.0.0",
           "displayName": "Zoho Mail",
           "description": "Project-scoped Zoho Mail intake with optional, separately approved replies.",
@@ -990,7 +990,7 @@
           ]
         },
         "compatibility": {
-          "appVersionRange": ">=0.8.0-beta.4 <0.9.0",
+          "appVersionRange": ">=0.8.0-beta.5.109.58 <0.9.0",
           "platforms": [
             "macos-arm64"
           ]
@@ -1084,29 +1084,29 @@
           }
         ],
         "package": {
-          "path": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
-          "sizeBytes": 160103,
-          "archiveDigest": "sha256:111c9ea586a1eafce42c3fafcb931c4928495e9f3336d15e9ab4cda76806800d",
-          "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808",
-          "contentDigest": "sha256:817d6e4c7d9a75e54ac2d5eb0cc3b63937ee8a08844afeeef18f059318801782",
+          "path": "packages/com.hestora.zoho-mail/0.2.1/Hestora_Zoho_Mail_0.2.1.hestora-plugin",
+          "sizeBytes": 161462,
+          "archiveDigest": "sha256:97e74eab11bcadbe31dd08fed4d828c720fa5d4f758ebba0cea18f0077d39fc9",
+          "bundleDigest": "sha256:e5df6521c651b70f51a788533befc3ecc2700d5ccb1ad10fde3002180b1b7e69",
+          "contentDigest": "sha256:4be8ca930d7140a45bd9adf490db68688159a72b55ebc8690f75992cb7fa0169",
           "signature": {
             "scheme": "organization-signature-v1",
-            "keyId": "sha256:765020fbbe65a1a14b446d05ed1bd12af153da2fa02e024be786a24650e955ff",
-            "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808",
-            "signedContentDigest": "sha256:817d6e4c7d9a75e54ac2d5eb0cc3b63937ee8a08844afeeef18f059318801782",
-            "signature": "XAuN+ucbn8Wm/tdxtdtriXET/HE3DNbSdgMe6zjXvR9a7G6D1BBQ7Ffpo1ang+luPClrcxU2sBHNMuGNtoaxCg==",
+            "keyId": "sha256:bf424c68fa203476a0bfaf0e96ed00aeb51fd47d3bad29faaa87bebe7b00ae36",
+            "bundleDigest": "sha256:e5df6521c651b70f51a788533befc3ecc2700d5ccb1ad10fde3002180b1b7e69",
+            "signedContentDigest": "sha256:4be8ca930d7140a45bd9adf490db68688159a72b55ebc8690f75992cb7fa0169",
+            "signature": "0l8Nx0qPmp91aOCUHx11vgQp4qqIDfmds2hEVSf3RIt28TwWx3YieEidn7DYc04duQ47CrfounbRySt+XgRdCQ==",
             "publisherIdentity": "com.hestora",
             "certificateIssuer": "Hestora alpha release signing"
           }
         },
-        "publishedAt": "2026-08-25T13:50:36.349Z"
+        "publishedAt": "2026-10-14T16:12:03.987Z"
       },
       "signature": {
         "scheme": "organization-signature-v1",
         "environment": "development",
         "keyId": "sha256:db6bbfbb1336478fb440c7f7a501aede9635aff8dccadc0aa643e7fc514bee6e",
-        "signedEntryDigest": "sha256:1b6e20e8a942c64b3b47d2b10af4c0d91d25481922b72f79492785a7f7b3b254",
-        "signature": "X3aHTzKtJceXAWCTKNR35+dDI9O1/6rTbBSSjNUpJIJ4Zfx/RfN4YX8LfdP+juLOtIQNX7kXQMPgA5h495P7BA==",
+        "signedEntryDigest": "sha256:62488f624b3c8dcb9483c61c4796b9655a48c916cac80beef56cc841bdff7eef",
+        "signature": "j7/IZX2YpPKK5Z3iC4plDCdtXrD2yZtndO+NIHdbbfzIY8DwDQtfM4S/z7U9aD7lxDBBjj0RzNk7CARCufdyBA==",
         "publisherIdentity": "com.hestora",
         "certificateIssuer": "Hestora development catalogue signing"
       }

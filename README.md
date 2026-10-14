@@ -26,11 +26,17 @@ permissions, change a package or redirect a download without producing new valid
 - Jira Cloud `1.5.0`
 - LM Studio `0.2.0`
 - Ollama local models `0.5.0`
-- Zoho Mail `0.1.0`
+- Zoho Mail `0.2.1`
 
 The mailbox packages expose the native mailbox broker and unified setup wizard. The local-model
 packages expose Hestora's bounded same-Mac and trusted-LAN/VPN runtime broker. Packages contain no
 OAuth client secret, provider credential, refresh token, mailbox content or model weights.
+
+Zoho Mail `0.2.1` requires Hestora `0.8.0-beta.5.109.58` or later. It publishes the
+tested `0.2.0` package with a corrected compatibility floor and catalogue availability;
+its payload, contributions and permissions are unchanged. Existing installations do not
+upgrade automatically. Installation does not connect an account, read or send mail, or
+start AI. Account connection and project access remain separate, reviewed steps.
 
 The Codex package supplies isolated admission checks and enables Hestora's native provider broker.
 Installation requires a project grant, successful isolation and behaviour checks, and explicit

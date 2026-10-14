@@ -4,8 +4,8 @@
   "channel": "development",
   "platform": "macos-arm64",
   "feedPath": "index/v1/development/macos-arm64.feed.json",
-  "generatedAt": "2026-10-06T18:18:36.720Z",
-  "expiresAt": "2026-10-12T18:18:36.720Z",
+  "generatedAt": "2026-10-14T16:24:45.849Z",
+  "expiresAt": "2026-10-20T16:24:45.849Z",
   "packages": [
     {
       "pluginId": "com.hestora.claude-code",
@@ -44,10 +44,10 @@
     },
     {
       "pluginId": "com.hestora.jira-cloud",
-      "version": "1.2.0",
-      "packagePath": "packages/com.hestora.jira-cloud/1.2.0/Hestora_Jira_Cloud_1.2.0.hestora-plugin",
-      "archiveDigest": "sha256:8f476944111e0bddb4d13a1bd069f35f9a459e700603707614ac4621921c1f85",
-      "bundleDigest": "sha256:e30f0ccb288acdcb4f2fedc902dd6a5b713b73a839fd1c26c1940aec0ee4732d"
+      "version": "1.5.0",
+      "packagePath": "packages/com.hestora.jira-cloud/1.5.0/Hestora_Jira_Cloud_1.5.0.hestora-plugin",
+      "archiveDigest": "sha256:4a02539678398fbb162685bb03e80d791ad9d814546bf7b4486757ad31c5872c",
+      "bundleDigest": "sha256:fdf0a9d9429411e53710d2299f973d756cd89a00f871b9d2b093e05b5785005e"
     },
     {
       "pluginId": "com.hestora.lm-studio",
@@ -65,10 +65,10 @@
     },
     {
       "pluginId": "com.hestora.zoho-mail",
-      "version": "0.1.0",
-      "packagePath": "packages/com.hestora.zoho-mail/0.1.0/Hestora_Zoho_Mail_0.1.0.hestora-plugin",
-      "archiveDigest": "sha256:111c9ea586a1eafce42c3fafcb931c4928495e9f3336d15e9ab4cda76806800d",
-      "bundleDigest": "sha256:9361abfe18baa8c4df1c78a0acd7710b53a2e0dfd6833fa0a798a95c207e0808"
+      "version": "0.2.1",
+      "packagePath": "packages/com.hestora.zoho-mail/0.2.1/Hestora_Zoho_Mail_0.2.1.hestora-plugin",
+      "archiveDigest": "sha256:97e74eab11bcadbe31dd08fed4d828c720fa5d4f758ebba0cea18f0077d39fc9",
+      "bundleDigest": "sha256:e5df6521c651b70f51a788533befc3ecc2700d5ccb1ad10fde3002180b1b7e69"
     }
   ]
 }
